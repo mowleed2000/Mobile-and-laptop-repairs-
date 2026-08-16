@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&family=Inter:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
-    <link rel="preload" href="style.css?v=20260816_mlr1" as="style">
-    <link rel="stylesheet" href="style.css?v=20260816_mlr1">
+    <link rel="preload" href="style.css?v=20260816_mlr2" as="style">
+    <link rel="stylesheet" href="style.css?v=20260816_mlr2">
     <link rel="preload" as="image" href="assets/exterior.webp">
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" media="print" onload="this.onload=null;this.media='all'">
@@ -39,7 +39,7 @@
     <nav class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">
-                <span class="logo-main">M&amp;L REPAIRS</span>
+                <span class="logo-main">Mobile and Laptop Repairs</span>
                 <span class="logo-sub">NORTH END ROAD W14</span>
             </a>
             <ul class="nav-links" id="navLinks">
@@ -241,7 +241,7 @@
                     <div class="service-img-container"><img src="assets/cracked-screen.jpg" alt="Screen Repair" class="service-card-img" style="width:100%; height:180px; object-fit:cover;" loading="lazy" decoding="async"></div>
                     <div style="padding: 20px;">
                         <h3 style="color:#ffffff; font-size:1.2rem; font-weight:700;">iPhone & Samsung Screen Repair</h3>
-                        <p style="color:#cbd5e1; font-size:0.88rem; margin:8px 0 16px 0;">Cracked glass or bleeding OLED? Certified OEM display screen replacements with store warranty.</p>
+                        <p style="color:#cbd5e1; font-size:0.88rem; margin:8px 0 16px 0;">Cracked glass or a bleeding OLED? Quality replacement screens fitted in store — ask about the warranty on that job.</p>
                         <a href="screen-repair.html" style="color: #f87171; font-weight: 700; text-decoration: none;">30-Min Walk-In &rarr;</a>
                     </div>
                 </div>
@@ -250,7 +250,7 @@
                     <div class="service-img-container"><img src="assets/battery-repair.jpg" alt="Battery Replacement" class="service-card-img" style="width:100%; height:180px; object-fit:cover;" loading="lazy" decoding="async"></div>
                     <div style="padding: 20px;">
                         <h3 style="color:#ffffff; font-size:1.2rem; font-weight:700;">Battery Replacements</h3>
-                        <p style="color:#cbd5e1; font-size:0.88rem; margin:8px 0 16px 0;">Rapid battery drain or swelling? Restore 100% capacity with high-grade replacement battery cells.</p>
+                        <p style="color:#cbd5e1; font-size:0.88rem; margin:8px 0 16px 0;">Rapid battery drain or swelling? We test the cell in store and fit a replacement when that is the fault.</p>
                         <a href="battery-replacement.html" style="color: #f87171; font-weight: 700; text-decoration: none;">Express Fitting &rarr;</a>
                     </div>
                 </div>
@@ -297,6 +297,15 @@
                         <h3 style="color:#ffffff; font-size:1.2rem; font-weight:700;">Home &amp; Office Call-Outs</h3>
                         <p style="color:#cbd5e1; font-size:0.88rem; margin:8px 0 16px 0;">Can't come to the shop? We come to you across West Kensington &amp; West London for on-site device repairs.</p>
                         <a href="call-out-services.html" style="color: #f87171; font-weight: 700; text-decoration: none;">Book a Call-Out &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="service-card" onclick="window.location.href='trade-in.html'" style="cursor: pointer; background: #161616; border: 1px solid rgba(225,29,42,0.25); border-radius: 16px; overflow: hidden;">
+                    <div class="service-img-container"><img src="assets/Iphone 17 pro max.webp" alt="Trade in phones and laptops" class="service-card-img" style="width:100%; height:180px; object-fit:cover;" loading="lazy" decoding="async"></div>
+                    <div style="padding: 20px;">
+                        <h3 style="color:#ffffff; font-size:1.2rem; font-weight:700;">Trade-In &amp; Cash Exchange</h3>
+                        <p style="color:#cbd5e1; font-size:0.88rem; margin:8px 0 16px 0;">Sell or part-exchange phones and laptops at the counter — working, cracked, or faulty. Honest offer, no pressure.</p>
+                        <a href="trade-in.html" style="color: #f87171; font-weight: 700; text-decoration: none;">Get a Valuation &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -451,114 +460,102 @@
                 <p>Real Google reviews for Mobile and Laptop Repairs on North End Road, West Kensington.</p>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-top: 35px;">
-                <div class="service-card" style="background: #161616; padding: 24px; border: 1px solid rgba(225,29,42,0.25); border-radius: 18px;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
-                        <div style="display: flex; align-items: center; gap: 10px;">
-                            <div style="width: 42px; height: 42px; border-radius: 50%; background: #e11d2a; color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">JM</div>
+            <div class="reviews-grid">
+                <article class="review-card">
+                    <div class="review-header">
+                        <div class="review-person">
+                            <div class="review-avatar">JM</div>
                             <div>
-                                <h4 style="color: #fff; font-size: 0.95rem; margin: 0;">Jaivik Modi</h4>
-                                <span style="font-size: 0.75rem; color: #94a3b8;"><i class="fa-brands fa-google" style="color: #4285F4;"></i> 4 reviews · 2 photos</span>
+                                <h4>Jaivik Modi</h4>
+                                <span class="review-meta"><i class="fa-brands fa-google" style="color: #4285F4;"></i> 4 reviews · 2 photos</span>
                             </div>
                         </div>
-                        <div style="color: #f59e0b; font-size: 0.85rem;">
+                        <div class="review-stars" aria-label="5 stars">
                             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                         </div>
                     </div>
-                    <p style="font-size: 0.88rem; color: #cbd5e1; line-height: 1.6; font-style: italic;">
-                        "Excellent service! They replaced my Lenovo ThinkPad LCD quickly and professionally. The screen looks perfect, just like new, and the repair was completed faster than I expected. Great communication, fair pricing, and outstanding workmanship. I highly recommend them for any Laptop screen or LCD repairs!"
-                    </p>
-                </div>
+                    <p class="review-quote">“Excellent service! They replaced my Lenovo ThinkPad LCD quickly and professionally. The screen looks perfect, just like new, and the repair was completed faster than I expected. Great communication, fair pricing, and outstanding workmanship. I highly recommend them for any Laptop screen or LCD repairs!”</p>
+                </article>
 
-                <div class="service-card" style="background: #161616; padding: 24px; border: 1px solid rgba(225,29,42,0.25); border-radius: 18px;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
-                        <div style="display: flex; align-items: center; gap: 10px;">
-                            <div style="width: 42px; height: 42px; border-radius: 50%; background: #b91c1c; color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">J</div>
+                <article class="review-card">
+                    <div class="review-header">
+                        <div class="review-person">
+                            <div class="review-avatar" style="background:#b91c1c;">J</div>
                             <div>
-                                <h4 style="color: #fff; font-size: 0.95rem; margin: 0;">James</h4>
-                                <span style="font-size: 0.75rem; color: #94a3b8;"><i class="fa-brands fa-google" style="color: #4285F4;"></i> 2 reviews</span>
+                                <h4>James</h4>
+                                <span class="review-meta"><i class="fa-brands fa-google" style="color: #4285F4;"></i> 2 reviews</span>
                             </div>
                         </div>
-                        <div style="color: #f59e0b; font-size: 0.85rem;">
+                        <div class="review-stars" aria-label="5 stars">
                             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                         </div>
                     </div>
-                    <p style="font-size: 0.88rem; color: #cbd5e1; line-height: 1.6; font-style: italic;">
-                        "Perfect iPhone 14 Pro Max repair done in front of me for a fair price in minutes. This is now my go to repair shop."
-                    </p>
-                </div>
+                    <p class="review-quote">“Perfect iPhone 14 Pro Max repair done in front of me for a fair price in minutes. This is now my go to repair shop.”</p>
+                </article>
 
-                <div class="service-card" style="background: #161616; padding: 24px; border: 1px solid rgba(225,29,42,0.25); border-radius: 18px;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
-                        <div style="display: flex; align-items: center; gap: 10px;">
-                            <div style="width: 42px; height: 42px; border-radius: 50%; background: #7f1d1d; color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">RS</div>
+                <article class="review-card">
+                    <div class="review-header">
+                        <div class="review-person">
+                            <div class="review-avatar" style="background:#7f1d1d;">RS</div>
                             <div>
-                                <h4 style="color: #fff; font-size: 0.95rem; margin: 0;">Rahul Singh</h4>
-                                <span style="font-size: 0.75rem; color: #94a3b8;"><i class="fa-brands fa-google" style="color: #4285F4;"></i> 3 reviews · 1 photo</span>
+                                <h4>Rahul Singh</h4>
+                                <span class="review-meta"><i class="fa-brands fa-google" style="color: #4285F4;"></i> 3 reviews · 1 photo</span>
                             </div>
                         </div>
-                        <div style="color: #f59e0b; font-size: 0.85rem;">
+                        <div class="review-stars" aria-label="5 stars">
                             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                         </div>
                     </div>
-                    <p style="font-size: 0.88rem; color: #cbd5e1; line-height: 1.6; font-style: italic;">
-                        "Successfully fixed my PS5 HDMI issue and got it working again. The repair was completed properly, and the console is now displaying perfectly. Very satisfied with the result. Also with the amazing price. Highly Recommended"
-                    </p>
-                </div>
+                    <p class="review-quote">“Successfully fixed my PS5 HDMI issue and got it working again. The repair was completed properly, and the console is now displaying perfectly. Very satisfied with the result. Also with the amazing price. Highly Recommended”</p>
+                </article>
 
-                <div class="service-card" style="background: #161616; padding: 24px; border: 1px solid rgba(225,29,42,0.25); border-radius: 18px;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
-                        <div style="display: flex; align-items: center; gap: 10px;">
-                            <div style="width: 42px; height: 42px; border-radius: 50%; background: #991b1b; color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">JR</div>
+                <article class="review-card">
+                    <div class="review-header">
+                        <div class="review-person">
+                            <div class="review-avatar" style="background:#991b1b;">JR</div>
                             <div>
-                                <h4 style="color: #fff; font-size: 0.95rem; margin: 0;">John Ryan</h4>
-                                <span style="font-size: 0.75rem; color: #94a3b8;"><i class="fa-brands fa-google" style="color: #4285F4;"></i> 1 review</span>
+                                <h4>John Ryan</h4>
+                                <span class="review-meta"><i class="fa-brands fa-google" style="color: #4285F4;"></i> 1 review</span>
                             </div>
                         </div>
-                        <div style="color: #f59e0b; font-size: 0.85rem;">
+                        <div class="review-stars" aria-label="5 stars">
                             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                         </div>
                     </div>
-                    <p style="font-size: 0.88rem; color: #cbd5e1; line-height: 1.6; font-style: italic;">
-                        "Love having this shop in our neighbourhood! The guy is super friendly and always ready to help whether it’s fixing a cracked screen, setting up a new phone, or finding the right accessories. Prices are fair, service is quick, and you can really tell they care about their customers. So nice to have a reliable local spot for all our mobile needs — highly recommend checking them out!"
-                    </p>
-                </div>
+                    <p class="review-quote">“Love having this shop in our neighbourhood! The guy is super friendly and always ready to help whether it’s fixing a cracked screen, setting up a new phone, or finding the right accessories. Prices are fair, service is quick, and you can really tell they care about their customers. So nice to have a reliable local spot for all our mobile needs — highly recommend checking them out!”</p>
+                </article>
 
-                <div class="service-card" style="background: #161616; padding: 24px; border: 1px solid rgba(225,29,42,0.25); border-radius: 18px;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
-                        <div style="display: flex; align-items: center; gap: 10px;">
-                            <div style="width: 42px; height: 42px; border-radius: 50%; background: #b91c1c; color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">DS</div>
+                <article class="review-card">
+                    <div class="review-header">
+                        <div class="review-person">
+                            <div class="review-avatar" style="background:#b91c1c;">DS</div>
                             <div>
-                                <h4 style="color: #fff; font-size: 0.95rem; margin: 0;">Diana Sima</h4>
-                                <span style="font-size: 0.75rem; color: #94a3b8;"><i class="fa-brands fa-google" style="color: #4285F4;"></i> 4 reviews · 1 photo</span>
+                                <h4>Diana Sima</h4>
+                                <span class="review-meta"><i class="fa-brands fa-google" style="color: #4285F4;"></i> 4 reviews · 1 photo</span>
                             </div>
                         </div>
-                        <div style="color: #f59e0b; font-size: 0.85rem;">
+                        <div class="review-stars" aria-label="5 stars">
                             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                         </div>
                     </div>
-                    <p style="font-size: 0.88rem; color: #cbd5e1; line-height: 1.6; font-style: italic;">
-                        "Super helpful and genuinely kind. He checked my phone, explained everything clearly, and gave me an honest estimate of its value even though I didn’t end up buying anything. Took the time to help without any pressure at all. Rare to find someone this professional and fair. Highly recommend."
-                    </p>
-                </div>
+                    <p class="review-quote">“Super helpful and genuinely kind. He checked my phone, explained everything clearly, and gave me an honest estimate of its value even though I didn’t end up buying anything. Took the time to help without any pressure at all. Rare to find someone this professional and fair. Highly recommend.”</p>
+                </article>
 
-                <div class="service-card" style="background: #161616; padding: 24px; border: 1px solid rgba(225,29,42,0.25); border-radius: 18px;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
-                        <div style="display: flex; align-items: center; gap: 10px;">
-                            <div style="width: 42px; height: 42px; border-radius: 50%; background: #7f1d1d; color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">JM</div>
+                <article class="review-card">
+                    <div class="review-header">
+                        <div class="review-person">
+                            <div class="review-avatar" style="background:#7f1d1d;">JM</div>
                             <div>
-                                <h4 style="color: #fff; font-size: 0.95rem; margin: 0;">Jatin Medhiya</h4>
-                                <span style="font-size: 0.75rem; color: #94a3b8;"><i class="fa-brands fa-google" style="color: #4285F4;"></i> 2 reviews · 2 photos</span>
+                                <h4>Jatin Medhiya</h4>
+                                <span class="review-meta"><i class="fa-brands fa-google" style="color: #4285F4;"></i> 2 reviews · 2 photos</span>
                             </div>
                         </div>
-                        <div style="color: #f59e0b; font-size: 0.85rem;">
+                        <div class="review-stars" aria-label="5 stars">
                             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                         </div>
                     </div>
-                    <p style="font-size: 0.88rem; color: #cbd5e1; line-height: 1.6; font-style: italic;">
-                        "Excellent Service and Great Products! I recently bought a phone from this shop and had a fantastic experience. The staff was friendly, knowledgeable, and helped me choose the perfect device within my budget. They answered all my questions patiently and even assisted with setting up the phone. The store had a great selection of the latest models and accessories. I’m extremely satisfied with both the product and the service. Highly recommended."
-                    </p>
-                </div>
+                    <p class="review-quote">“Excellent Service and Great Products! I recently bought a phone from this shop and had a fantastic experience. The staff was friendly, knowledgeable, and helped me choose the perfect device within my budget. They answered all my questions patiently and even assisted with setting up the phone. The store had a great selection of the latest models and accessories. I’m extremely satisfied with both the product and the service. Highly recommended.”</p>
+                </article>
             </div>
         </div>
     </section>
@@ -624,7 +621,7 @@
         <div class="container footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto;">
             <div class="footer-col">
                 <a href="index.html" class="logo">
-                    <span class="logo-main" style="color: #ffffff; font-weight: 800; font-size: 1.1rem;">M&amp;L REPAIRS</span><br>
+                    <span class="logo-main" style="color: #ffffff; font-weight: 800; font-size: 1rem;">Mobile and Laptop Repairs</span><br>
                     <span class="logo-sub" style="color: #f87171; font-size: 0.75rem; letter-spacing: 0.1em;">NORTH END ROAD W14</span>
                 </a>
                 <p style="margin-top: 14px; font-size: 0.88rem; color: #cbd5e1; line-height: 1.6;">

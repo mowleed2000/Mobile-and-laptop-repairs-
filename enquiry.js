@@ -19,6 +19,8 @@
         var deviceEl = document.getElementById('device');
         var issueEl = document.getElementById('issue');
         var conditionEl = document.getElementById('condition');
+        var serviceEl = document.getElementById('serviceType');
+        var serviceLabel = serviceEl && serviceEl.value ? serviceEl.value : '';
 
         var formData = new FormData();
         formData.append('access_key', '5bc83c79-247a-42c2-901d-72ec0b4e0573');
@@ -29,10 +31,10 @@
             formData.append('subject', 'Trade-In Valuation: ' + deviceEl.value);
             formData.append('details', 'Device: ' + deviceEl.value + '\nCondition: ' + conditionEl.value);
         } else if (deviceEl && issueEl) {
-            formData.append('subject', 'New Repair Enquiry: ' + deviceEl.value);
-            formData.append('details', 'Device: ' + deviceEl.value + '\nIssue: ' + issueEl.value);
+            formData.append('subject', (serviceLabel ? serviceLabel + ': ' : 'New Repair Enquiry: ') + deviceEl.value);
+            formData.append('details', (serviceLabel ? 'Service: ' + serviceLabel + '\n' : '') + 'Device: ' + deviceEl.value + '\nIssue: ' + issueEl.value);
         } else {
-            formData.append('subject', 'Website Enquiry');
+            formData.append('subject', serviceLabel || 'Website Enquiry');
         }
 
         fetch('https://api.web3forms.com/submit', {

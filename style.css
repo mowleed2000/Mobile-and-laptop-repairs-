@@ -1,22 +1,22 @@
 
 :root {
-    --primary: #e11d2a;
-    --primary-hover: #b91c1c;
-    --primary-light: rgba(225, 29, 42, 0.15);
-    --secondary: #f87171;
-    --accent: #f87171;
-    --bg-dark: #0a0a0a;
-    --bg-card: #161616;
-    --bg-card-hover: #1f1f1f;
-    --border: #2a2a2a;
-    --border-light: rgba(225, 29, 42, 0.28);
+    --primary: #ff1f33;
+    --primary-hover: #d40d1f;
+    --primary-light: rgba(255, 31, 51, 0.18);
+    --secondary: #ff6b75;
+    --accent: #ff6b75;
+    --bg-dark: #0c0505;
+    --bg-card: #1a0c0c;
+    --bg-card-hover: #241111;
+    --border: #3a1818;
+    --border-light: rgba(255, 31, 51, 0.42);
     --text-white: #ffffff;
     --text-main: #f8fafc;
     --text-muted: #94a3b8;
     --gold: #f59e0b;
     --success: #d4d4d4;
     --whatsapp: #25d366;
-    --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    --shadow-glass: 0 8px 32px 0 rgba(80, 0, 8, 0.45);
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -30,6 +30,9 @@
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-dark);
+    background-image:
+        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(255, 31, 51, 0.18), transparent 55%),
+        radial-gradient(ellipse 40% 30% at 100% 20%, rgba(255, 31, 51, 0.08), transparent 50%);
     color: var(--text-main);
     line-height: 1.6;
     overflow-x: hidden;
@@ -55,8 +58,8 @@ body {
 
 /* Top Bar */
 .top-bar {
-    background: #050505;
-    border-bottom: 1px solid var(--border);
+    background: #140606;
+    border-bottom: 1px solid var(--border-light);
     padding: 10px 0;
     font-size: 0.82rem;
     color: var(--text-muted);
@@ -85,8 +88,8 @@ body {
 
 /* Navbar */
 .navbar {
-    background: rgba(10, 10, 10, 0.98);
-    border-bottom: 1px solid var(--border);
+    background: rgba(16, 4, 4, 0.98);
+    border-bottom: 1px solid rgba(255, 31, 51, 0.28);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -104,22 +107,26 @@ body {
     text-decoration: none;
     display: flex;
     flex-direction: column;
+    flex-shrink: 0;
+    max-width: 11.5rem;
 }
 
 .logo-main {
     font-family: 'Outfit', sans-serif;
-    font-size: 1.4rem;
-    font-weight: 900;
-    letter-spacing: -0.5px;
+    font-size: 0.92rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
     color: #ffffff;
 }
 
 .logo-sub {
-    font-size: 0.65rem;
+    font-size: 0.58rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.08em;
     color: var(--primary);
     font-weight: 700;
+    margin-top: 2px;
 }
 
 .nav-links {
@@ -411,7 +418,11 @@ body {
     display: block;
 }
 .storefront-photo {
-    object-position: 50% 55%;
+    object-position: 50% 10%;
+}
+
+.hero .storefront-photo {
+    object-position: 50% 6%;
 }
 
 .contact-storefront {
@@ -980,16 +991,16 @@ body {
     }
 }
 
-/* Homepage repairs grid – equal-height cards in even 3×2 rows */
+/* Homepage repairs grid – 8 cards in two even rows of four */
 #tech-services .services-grid,
 #tech-services .tech-services-grid {
     display: grid !important;
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    gap: 24px !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 20px !important;
     align-items: stretch;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1100px) {
     #tech-services .services-grid,
     #tech-services .tech-services-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
@@ -1239,7 +1250,7 @@ h1, h2, h3, h4, h5, h6, .section-header h2 {
 }
 
 p, .section-header p, body {
-    color: #d1fae5 !important;
+    color: #f3e8e8 !important;
 }
 
 .service-card-body h3 {
@@ -1263,7 +1274,7 @@ p, .section-header p, body {
 }
 
 .logo-sub {
-    color: #e11d2a !important;
+    color: #ff1f33 !important;
 }
 
 
@@ -1935,5 +1946,233 @@ p, .section-header p, body {
     .brand-marquee-track {
         animation: none !important;
         transform: none !important;
+    }
+}
+
+/* Homepage Google reviews – equal headers so quotes start on one line */
+#reviews .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 35px;
+    align-items: stretch;
+}
+
+.review-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: var(--bg-card);
+    padding: 24px;
+    border: 1px solid var(--border-light);
+    border-radius: 18px;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    min-height: 64px;
+    margin-bottom: 14px;
+}
+
+.review-person {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    min-width: 0;
+}
+
+.review-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.05rem;
+    flex-shrink: 0;
+}
+
+.review-person h4 {
+    color: #fff;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.review-meta {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    display: block;
+}
+
+.review-stars {
+    color: #f59e0b;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.review-quote {
+    font-size: 0.88rem;
+    color: #e8d5d5 !important;
+    line-height: 1.6;
+    font-style: italic;
+    flex: 1;
+    margin: 0;
+}
+
+@media (max-width: 992px) {
+    #reviews .reviews-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    #reviews .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Service landing blocks injected on repair pages */
+.sl-section {
+    padding: 56px 0;
+}
+
+.sl-section.alt {
+    background: var(--bg-card);
+}
+
+.sl-grid-3,
+.sl-grid-4 {
+    display: grid;
+    gap: 18px;
+    margin-top: 28px;
+}
+
+.sl-grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.sl-grid-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.sl-card,
+.sl-step,
+.sl-trust {
+    background: #140808;
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    padding: 22px;
+}
+
+.sl-card h3,
+.sl-step h3,
+.sl-trust h3 {
+    font-size: 1.05rem;
+    margin: 0 0 8px 0;
+    color: #ffffff;
+}
+
+.sl-card p,
+.sl-step p,
+.sl-trust p {
+    font-size: 0.88rem;
+    color: #e8d5d5 !important;
+    margin: 0;
+    line-height: 1.55;
+}
+
+.sl-step-num,
+.sl-trust i {
+    color: var(--primary);
+    font-weight: 800;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.sl-trust i {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.sl-review {
+    max-width: 760px;
+    margin: 28px auto 0;
+    background: #140808;
+    border: 1px solid var(--border-light);
+    border-radius: 18px;
+    padding: 26px;
+}
+
+.sl-review p {
+    font-style: italic;
+    color: #e8d5d5 !important;
+    line-height: 1.65;
+}
+
+.sl-review cite {
+    display: block;
+    margin-top: 12px;
+    font-style: normal;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.sl-form-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.sl-form-wrap .enquiry-form {
+    background: #140808;
+    border: 1px solid var(--border-light);
+    border-radius: 18px;
+    padding: 24px;
+}
+
+.sl-cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.sl-note {
+    font-size: 0.9rem;
+    color: #e8d5d5 !important;
+    margin-top: 10px;
+}
+
+.footer .logo {
+    max-width: 14rem;
+}
+
+.footer .logo-main {
+    font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+    .sl-grid-3,
+    .sl-grid-4,
+    .sl-form-wrap {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .logo-main {
+        font-size: 0.82rem;
+        max-width: 8.5rem;
     }
 }
