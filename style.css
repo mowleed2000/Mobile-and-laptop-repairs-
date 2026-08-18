@@ -378,14 +378,14 @@ body {
     position: relative;
     width: 100%;
     max-width: 500px;
-    height: 380px;
+    height: 480px;
     margin: 0 auto;
 }
 
 .slider-container {
     position: relative;
     width: 100%;
-    height: 380px;
+    height: 480px;
     border-radius: 20px;
     overflow: hidden;
     border: 1px solid var(--border);
@@ -398,7 +398,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 380px;
+    height: 100%;
     opacity: 0;
     transition: opacity 0.6s ease-in-out;
     pointer-events: none;
@@ -412,23 +412,23 @@ body {
 .slide-img,
 .storefront-photo {
     width: 100%;
-    height: 380px;
+    height: 480px;
     object-fit: cover;
     object-position: center;
     display: block;
 }
 .storefront-photo {
-    object-position: 50% 10%;
+    object-position: center top;
 }
 
 .hero .storefront-photo {
-    object-position: 50% 6%;
+    object-position: center top;
 }
 
 .contact-storefront {
     width: 100%;
     max-width: 500px;
-    height: 380px;
+    height: 480px;
     margin-left: auto;
     border-radius: 20px;
     overflow: hidden;
@@ -437,7 +437,8 @@ body {
     background: #050505;
 }
 .contact-storefront .storefront-photo {
-    height: 380px;
+    height: 480px;
+    object-position: center top;
 }
 
 .slide-caption {
@@ -1509,16 +1510,18 @@ p, .section-header p, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 22px;
+    padding: 6px;
     overflow: hidden;
 }
 .catalogue-card-image img {
     width: 100%;
     height: 100%;
-    max-height: 100%;
-    max-width: 100%;
+    max-height: none;
+    max-width: none;
     object-fit: contain;
     object-position: center center;
+    transform: scale(1.18);
+    transform-origin: center center;
     display: block;
 }
 .category-tag-badge {
@@ -1689,10 +1692,25 @@ p, .section-header p, body {
     .contact-storefront {
         margin-left: 0;
         max-width: 100%;
-        height: 320px;
+        height: 420px;
     }
     .contact-storefront .storefront-photo {
-        height: 320px;
+        height: 420px;
+        object-position: center top;
+    }
+
+    .hero-slider-wrapper,
+    .slider-container {
+        height: 420px;
+    }
+    .hero-slider-wrapper .slide {
+        height: 100%;
+    }
+    .hero .storefront-photo,
+    .slide-img.storefront-photo,
+    .storefront-photo {
+        height: 420px;
+        object-position: center top;
     }
 
     .nav-container {
@@ -1836,7 +1854,7 @@ p, .section-header p, body {
         height: 210px !important;
         background: #ffffff !important;
         border-bottom: 1px solid rgba(225, 29, 42, 0.2) !important;
-        padding: 16px !important;
+        padding: 4px !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
@@ -1846,10 +1864,12 @@ p, .section-header p, body {
     .catalogue-card-image img {
         width: 100% !important;
         height: 100% !important;
-        max-height: 100% !important;
-        max-width: 100% !important;
+        max-height: none !important;
+        max-width: none !important;
         object-fit: contain !important;
         object-position: center center !important;
+        transform: scale(1.18) !important;
+        transform-origin: center center !important;
     }
 
     /* Trade-in mobile cards – proper aspect ratio, not full-width strips */
@@ -2125,6 +2145,10 @@ p, .section-header p, body {
     color: #ffffff;
     font-weight: 700;
     font-size: 0.9rem;
+}
+
+.sl-moved-form {
+    margin: 0;
 }
 
 .sl-form-wrap {
