@@ -1958,6 +1958,7 @@ p, .section-header p, body {
 #refurbished-devices,
 #vapes-showcase,
 #vape-brands,
+#store-map,
 .footer {
     content-visibility: auto;
     contain-intrinsic-size: 1px 480px;
@@ -2444,11 +2445,57 @@ p, .section-header p, body {
 }
 
 .store-map-frame {
+    position: relative;
     border-radius: 20px;
     overflow: hidden;
     border: 1px solid rgba(225,29,42,0.3);
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     height: 350px;
+    background: #120808;
+}
+
+.store-map-facade {
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    margin: 0;
+    padding: 28px 20px;
+    cursor: pointer;
+    background:
+        radial-gradient(circle at 50% 42%, rgba(225, 29, 42, 0.22), transparent 42%),
+        repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0 1px, transparent 1px 28px),
+        repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0 1px, transparent 1px 28px),
+        #120808;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+}
+
+.store-map-facade:hover,
+.store-map-facade:focus-visible {
+    background-color: #1a0c0c;
+}
+
+.store-map-facade strong {
+    font-size: 1.05rem;
+}
+
+.store-map-facade span {
+    color: #e8d5d5;
+    font-size: 0.9rem;
+    max-width: 28rem;
+}
+
+.store-map-directions {
+    display: inline-block;
+    margin-top: 14px;
+    color: #f87171;
+    font-weight: 700;
 }
 
 @media (max-width: 900px) {

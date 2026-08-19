@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&family=Inter:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
-    <link rel="preload" href="style.css?v=20260819_mlr5" as="style">
-    <link rel="stylesheet" href="style.css?v=20260819_mlr5">
+    <link rel="preload" href="style.css?v=20260819_mlr6" as="style">
+    <link rel="stylesheet" href="style.css?v=20260819_mlr6">
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" media="print" onload="this.onload=null;this.media='all'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css" media="print" onload="this.onload=null;this.media='all'">
@@ -219,9 +219,13 @@
             <span class="section-tag"><i class="fa-solid fa-map-location-dot"></i> Walk-in customers</span>
             <h2>Find us on North End Road</h2>
             <p class="store-map-lead">175b North End Rd, West Kensington, London W14 9NL. No appointment needed — bring the device in.</p>
-            <div class="store-map-frame">
-                <iframe src="https://maps.google.com/maps?q=175b+North+End+Rd,+London+W14+9NL&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mobile and Laptop Repairs on Google Maps"></iframe>
+            <div class="store-map-frame" data-map-src="https://maps.google.com/maps?q=175b+North+End+Rd,+London+W14+9NL&t=&z=15&ie=UTF8&iwloc=&output=embed">
+                <button type="button" class="store-map-facade">
+                    <strong>Show the shop on the map</strong>
+                    <span>175b North End Rd, West Kensington, London W14 9NL</span>
+                </button>
             </div>
+            <a class="store-map-directions" href="https://www.google.com/maps/search/?api=1&query=175b+North+End+Rd,+London+W14+9NL" target="_blank" rel="noopener">Open in Google Maps</a>
         </div>
     </section>
 
@@ -276,6 +280,7 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
     <script src="nav.js" defer></script>
+    <script src="map.js" defer></script>
     <script src="enquiry.js" defer></script>
     <script src="device-page.js" defer></script>
 </body>
