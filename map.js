@@ -23,30 +23,11 @@
         frame.appendChild(iframe);
     }
 
-    function setup(frame) {
+    document.querySelectorAll('.store-map-frame[data-map-src]').forEach(function (frame) {
         var button = frame.querySelector('.store-map-facade');
-        if (button) {
-            button.addEventListener('click', function () {
-                loadMap(frame);
-            });
-        }
-
-        if (!('IntersectionObserver' in window)) return;
-
-        var observer = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (!entry.isIntersecting) return;
-                loadMap(frame);
-                observer.disconnect();
-            });
-        }, { rootMargin: '120px 0px', threshold: 0.01 });
-
-        // Let the page paint first so Google Maps never races the initial load.
-        window.setTimeout(function () {
-            if (frame.getAttribute('data-loaded') === '1') return;
-            observer.observe(frame);
-        }, 1200);
-    }
-
-    document.querySelectorAll('.store-map-frame[data-map-src]').forEach(setup);
+        if (!button) return;
+        button.addEventListener('click', function () {
+            loadMap(frame);
+        });
+    });
 })();

@@ -1,23 +1,6 @@
 (function () {
     'use strict';
 
-    function loadFontAwesome() {
-        if (document.getElementById('fa-all-css')) return;
-        var link = document.createElement('link');
-        link.id = 'fa-all-css';
-        link.rel = 'stylesheet';
-        link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
-        document.head.appendChild(link);
-    }
-
-    if ('requestIdleCallback' in window) {
-        requestIdleCallback(loadFontAwesome, { timeout: 1200 });
-    } else if (document.readyState === 'complete') {
-        loadFontAwesome();
-    } else {
-        window.addEventListener('load', loadFontAwesome);
-    }
-
     function isMobileNav() {
         return window.matchMedia('(max-width: 768px)').matches;
     }
