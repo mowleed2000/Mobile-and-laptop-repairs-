@@ -2200,3 +2200,162 @@ p, .section-header p, body {
         max-width: 8.5rem;
     }
 }
+
+/* Select-device hub and product repair pages */
+.device-pick-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 28px;
+}
+
+.device-pick-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.device-pick-card:hover,
+.device-pick-card.is-current {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+}
+
+.device-pick-card.is-current {
+    box-shadow: 0 0 0 1px var(--primary);
+}
+
+.device-pick-photo {
+    height: 140px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 8px;
+}
+
+.device-pick-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(1.16);
+    transform-origin: center;
+}
+
+.device-pick-card h3 {
+    font-size: 0.92rem;
+    padding: 12px 12px 14px;
+    margin: 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+.device-hero {
+    padding: 48px 0 28px;
+}
+
+.device-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 32px;
+    align-items: center;
+}
+
+.device-hero-photo {
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid var(--border-light);
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 16px;
+}
+
+.device-hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(1.12);
+}
+
+.device-model-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.device-model-chip {
+    appearance: none;
+    border: 1px solid var(--border-light);
+    background: #140808;
+    color: #f3e8e8;
+    border-radius: 99px;
+    padding: 8px 14px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.device-model-chip.is-active,
+.device-model-chip:hover {
+    border-color: var(--primary);
+    color: #ffffff;
+    background: rgba(255, 31, 51, 0.18);
+}
+
+.visit-toggle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.visit-toggle label {
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 12px 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #f3e8e8;
+    font-size: 0.9rem;
+}
+
+.visit-toggle input {
+    accent-color: var(--primary);
+}
+
+.device-issue-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+}
+
+@media (max-width: 992px) {
+    .device-pick-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .device-hero-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .device-pick-grid,
+    .device-issue-grid,
+    .visit-toggle {
+        grid-template-columns: 1fr;
+    }
+}
