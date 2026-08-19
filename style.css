@@ -504,7 +504,7 @@ body {
 .slide-img,
 .storefront-photo {
     width: 100%;
-    height: 480px;
+    height: 100%;
     object-fit: cover;
     object-position: center;
     display: block;
@@ -529,7 +529,9 @@ body {
     background: #050505;
 }
 .contact-storefront .storefront-photo {
-    height: 480px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     object-position: center top;
 }
 
@@ -1065,8 +1067,15 @@ body {
     display: block;
 }
 
+.tradein-steps-grid .service-card:first-child .service-img-container {
+    aspect-ratio: 500 / 480;
+}
+
 .tradein-steps-grid .service-card:first-child .service-card-img {
-    object-position: center 35%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
 }
 
 .tradein-steps-grid .service-card-body,
@@ -1787,7 +1796,9 @@ p, .section-header p, body {
         height: 420px;
     }
     .contact-storefront .storefront-photo {
-        height: 420px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
         object-position: center top;
     }
 
@@ -1800,8 +1811,9 @@ p, .section-header p, body {
     }
     .hero .storefront-photo,
     .slide-img.storefront-photo,
-    .storefront-photo {
-        height: 420px;
+    .contact-storefront .storefront-photo {
+        height: 100%;
+        object-fit: cover;
         object-position: center top;
     }
 
@@ -1996,8 +2008,15 @@ p, .section-header p, body {
         object-position: center !important;
     }
 
+    .tradein-steps-grid .service-card:first-child .service-img-container {
+        aspect-ratio: 500 / 480 !important;
+    }
+
     .tradein-steps-grid .service-card:first-child .service-card-img {
-        object-position: center 35% !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center top !important;
     }
 
     /* Heights and Object Fit sizes – scoped, not trade-in */
