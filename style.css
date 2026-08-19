@@ -1039,6 +1039,16 @@ body {
     object-position: center;
 }
 
+.tradein-hero-photo {
+    background: #ffffff;
+    height: 420px;
+}
+
+.tradein-hero-photo .subpage-card-img {
+    object-fit: contain;
+    object-position: center;
+}
+
 /* Trade-In page grids (scoped – do not affect catalogue) */
 .tradein-steps-grid {
     display: grid;
@@ -1078,13 +1088,7 @@ body {
     display: block;
 }
 
-.tradein-steps-grid .service-card:first-child .service-img-container {
-    aspect-ratio: 500 / 480;
-}
-
 .tradein-steps-grid .service-card:first-child .service-card-img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
     object-position: center top;
 }
@@ -1636,8 +1640,6 @@ p, .section-header p, body {
     max-width: none;
     object-fit: contain;
     object-position: center center;
-    transform: scale(1.18);
-    transform-origin: center center;
     display: block;
 }
 .category-tag-badge {
@@ -1987,8 +1989,6 @@ p, .section-header p, body {
         max-width: none !important;
         object-fit: contain !important;
         object-position: center center !important;
-        transform: scale(1.18) !important;
-        transform-origin: center center !important;
     }
 
     /* Trade-in mobile cards – proper aspect ratio, not full-width strips */
@@ -2023,13 +2023,7 @@ p, .section-header p, body {
         object-position: center !important;
     }
 
-    .tradein-steps-grid .service-card:first-child .service-img-container {
-        aspect-ratio: 500 / 480 !important;
-    }
-
     .tradein-steps-grid .service-card:first-child .service-card-img {
-        width: 100% !important;
-        height: 100% !important;
         object-fit: cover !important;
         object-position: center top !important;
     }
@@ -2367,21 +2361,20 @@ p, .section-header p, body {
 }
 
 .device-pick-photo {
-    height: 140px;
+    height: 160px;
     background: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding: 8px;
+    padding: 12px;
 }
 
 .device-pick-photo img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    transform: scale(1.16);
-    transform-origin: center;
+    object-position: center;
 }
 
 .device-pick-card h3 {
@@ -2419,7 +2412,7 @@ p, .section-header p, body {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    transform: scale(1.12);
+    object-position: center;
 }
 
 .device-after-form-ctas {
