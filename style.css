@@ -227,6 +227,13 @@ body {
     cursor: pointer;
 }
 
+.mobile-menu-btn i::before {
+    content: "☰";
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+
 /* HERO SECTION */
 .hero {
     padding: 65px 0;
@@ -377,15 +384,15 @@ body {
 .hero-slider-wrapper {
     position: relative;
     width: 100%;
-    max-width: 500px;
-    height: 480px;
+    max-width: 420px;
+    height: 620px;
     margin: 0 auto;
 }
 
 .slider-container {
     position: relative;
     width: 100%;
-    height: 480px;
+    height: 620px;
     border-radius: 20px;
     overflow: hidden;
     border: 1px solid var(--border);
@@ -409,26 +416,25 @@ body {
     pointer-events: auto;
 }
 
-.slide-img,
-.storefront-photo {
+.slide-img {
     width: 100%;
-    height: 480px;
+    height: 100%;
     object-fit: cover;
     object-position: center;
     display: block;
 }
-.storefront-photo {
-    object-position: center top;
-}
 
-.hero .storefront-photo {
+.hero .storefront-photo,
+.slide-img.storefront-photo {
+    object-fit: contain;
     object-position: center top;
+    background: #050505;
 }
 
 .contact-storefront {
     width: 100%;
-    max-width: 500px;
-    height: 480px;
+    max-width: 380px;
+    height: 620px;
     margin-left: auto;
     border-radius: 20px;
     overflow: hidden;
@@ -437,7 +443,9 @@ body {
     background: #050505;
 }
 .contact-storefront .storefront-photo {
-    height: 480px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     object-position: center top;
 }
 
@@ -973,8 +981,16 @@ body {
     display: block;
 }
 
-.tradein-steps-grid .service-card:first-child .service-card-img {
-    object-position: center 35%;
+.tradein-steps-grid .service-card:first-child .service-img-container {
+    aspect-ratio: 3 / 4;
+    background: #050505;
+}
+
+.tradein-steps-grid .service-card:first-child .service-card-img,
+.tradein-storefront-photo {
+    object-fit: contain;
+    object-position: center top;
+    background: #050505;
 }
 
 .tradein-steps-grid .service-card-body,
@@ -1691,17 +1707,19 @@ p, .section-header p, body {
     /* Top Announcements and Navbar */
     .contact-storefront {
         margin-left: 0;
-        max-width: 100%;
-        height: 420px;
+        max-width: min(380px, 100%);
+        height: 560px;
     }
     .contact-storefront .storefront-photo {
-        height: 420px;
+        height: 100%;
+        object-fit: contain;
         object-position: center top;
     }
 
     .hero-slider-wrapper,
     .slider-container {
-        height: 420px;
+        height: 560px;
+        max-width: min(380px, 100%);
     }
     .hero-slider-wrapper .slide {
         height: 100%;
@@ -1709,7 +1727,8 @@ p, .section-header p, body {
     .hero .storefront-photo,
     .slide-img.storefront-photo,
     .storefront-photo {
-        height: 420px;
+        height: 100%;
+        object-fit: contain;
         object-position: center top;
     }
 
@@ -1896,6 +1915,11 @@ p, .section-header p, body {
         max-height: none !important;
     }
 
+    .tradein-steps-grid .service-card:first-child .service-img-container {
+        aspect-ratio: 3 / 4 !important;
+        background: #050505;
+    }
+
     .tradein-steps-grid .service-card-img,
     .tradein-conditions-grid .service-card-img {
         width: 100% !important;
@@ -1904,8 +1928,12 @@ p, .section-header p, body {
         object-position: center !important;
     }
 
-    .tradein-steps-grid .service-card:first-child .service-card-img {
-        object-position: center 35% !important;
+    .tradein-steps-grid .service-card:first-child .service-card-img,
+    .tradein-storefront-photo {
+        object-fit: contain !important;
+        object-position: center top !important;
+        background: #050505 !important;
+        transform: none !important;
     }
 
     /* Heights and Object Fit sizes – scoped, not trade-in */

@@ -377,12 +377,8 @@ window.SERVICE_PAGES = {
     'trade-in': {
         formTitle: 'Trade-In & Cash',
         intro: 'Bring a phone or laptop to the counter for a cash or part-exchange offer — working, cracked, or faulty.',
-        included: [
-            { title: 'Counter valuation', text: 'We check model, storage, lock status and condition in front of you.' },
-            { title: 'Working or damaged', text: 'Cracked screens and dead devices still have parts value. You hear the number before you decide.' },
-            { title: 'No obligation', text: 'If the offer is not right, you take the device home. That is the same honest approach customers mention in reviews.' }
-        ],
-        trust: true,
+        included: [],
+        trust: false,
         process: [
             { title: 'Diagnose', text: 'IMEI/serial, iCloud/Google lock, and a quick function test.' },
             { title: 'Quote', text: 'Cash or against a phone we have in the cabinet — your choice.' },
