@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&family=Inter:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
-    <link rel="preload" href="style.css?v=20260816_mlr4" as="style">
-    <link rel="stylesheet" href="style.css?v=20260816_mlr4">
+    <link rel="preload" href="style.css?v=20260819_mlr5" as="style">
+    <link rel="stylesheet" href="style.css?v=20260819_mlr5">
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" media="print" onload="this.onload=null;this.media='all'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css" media="print" onload="this.onload=null;this.media='all'">
@@ -66,8 +66,40 @@
                         <li><a href="slowperformance.html"><i class="fa-solid fa-gauge-high"></i> Performance Tuneups</a></li>
                     </ul>
                 </li>
-                <li><a href="devices.html">Select Device</a></li>
-                <li><a href="trade-in.html">Trade-In & Cash</a></li>
+                <li class="dropdown device-nav-dropdown">
+                    <a href="devices.html" class="dropdown-trigger">Select Device <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu device-nav-menu">
+                        <li class="device-nav-group">
+                            <span class="device-nav-heading">Tablet</span>
+                            <a href="device-ipad.html">iPad</a>
+                            <a href="device-samsung-tablet.html">Samsung tablet</a>
+                            <a href="device-lenovo-tablet.html">Lenovo tablet</a>
+                        </li>
+                        <li class="device-nav-group">
+                            <span class="device-nav-heading">Smartphone</span>
+                            <a href="device-iphone.html">iPhone</a>
+                            <a href="device-google-pixel.html">Google Pixel</a>
+                            <a href="device-huawei.html">Huawei</a>
+                            <a href="device-sony-xperia.html">Sony Xperia</a>
+                        </li>
+                        <li class="device-nav-group">
+                            <span class="device-nav-heading">Laptop</span>
+                            <a href="device-macbook.html">MacBook</a>
+                            <a href="device-dell-laptop.html">Dell laptop</a>
+                            <a href="device-hp-laptop.html">HP laptop</a>
+                            <a href="device-lenovo-laptop.html">Lenovo laptop</a>
+                            <a href="device-acer-laptop.html">Acer laptop</a>
+                            <a href="device-samsung-laptop.html">Samsung laptop</a>
+                        </li>
+                        <li class="device-nav-group">
+                            <span class="device-nav-heading">Console</span>
+                            <a href="device-ps5.html">PlayStation 5</a>
+                            <a href="device-xbox.html">Xbox</a>
+                        </li>
+                        <li class="device-nav-all"><a href="devices.html">All devices</a></li>
+                    </ul>
+                </li>
+<li><a href="trade-in.html">Trade-In & Cash</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="catalogue.html">Product Catalogue</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
@@ -257,6 +289,18 @@
             </div>
         </div>
     </section>
+    <section class="section" id="store-map">
+        <div class="container text-center">
+            <span class="section-tag"><i class="fa-solid fa-map-location-dot"></i> Walk-in customers</span>
+            <h2>Find us on North End Road</h2>
+            <p class="store-map-lead">175b North End Rd, West Kensington, London W14 9NL. No appointment needed — bring the device in.</p>
+            <div class="store-map-frame">
+                <iframe src="https://maps.google.com/maps?q=175b+North+End+Rd,+London+W14+9NL&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mobile and Laptop Repairs on Google Maps"></iframe>
+            </div>
+        </div>
+    </section>
+
+
 
     <footer class="footer">
         <div class="container footer-grid">

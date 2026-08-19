@@ -44,8 +44,6 @@
                         feedback.style.color = '#f87171';
                         feedback.textContent = 'Enquiry sent. We will contact you on that number.';
                         form.reset();
-                        var chips = document.querySelectorAll('.device-model-chip');
-                        chips.forEach(function (c, i) { c.classList.toggle('is-active', i === 0); });
                     } else {
                         feedback.style.color = '#ef4444';
                         feedback.textContent = 'Submission failed, please try again.';
@@ -67,22 +65,4 @@
         }
         if (typeof original === 'function') original(event);
     };
-
-    var chips = document.querySelectorAll('.device-model-chip');
-    var modelSelect = document.getElementById('model');
-    if (!chips.length || !modelSelect) return;
-
-    chips.forEach(function (chip) {
-        chip.addEventListener('click', function () {
-            var value = chip.getAttribute('data-model');
-            modelSelect.value = value;
-            chips.forEach(function (c) { c.classList.toggle('is-active', c === chip); });
-        });
-    });
-
-    modelSelect.addEventListener('change', function () {
-        chips.forEach(function (c) {
-            c.classList.toggle('is-active', c.getAttribute('data-model') === modelSelect.value);
-        });
-    });
 })();

@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&family=Inter:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
-    <link rel="preload" href="style.css?v=20260816_mlr4" as="style">
-    <link rel="stylesheet" href="style.css?v=20260816_mlr4">
+    <link rel="preload" href="style.css?v=20260819_mlr5" as="style">
+    <link rel="stylesheet" href="style.css?v=20260819_mlr5">
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" media="print" onload="this.onload=null;this.media='all'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css" media="print" onload="this.onload=null;this.media='all'">
@@ -60,7 +60,39 @@
                         <li><a href="slowperformance.html"><i class="fa-solid fa-gauge-high"></i> Performance Tuneups</a></li>
                     </ul>
                 </li>
-                <li><a href="devices.html" class="active">Select Device</a></li>
+                <li class="dropdown device-nav-dropdown">
+                    <a href="devices.html" class="dropdown-trigger active">Select Device <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu device-nav-menu">
+                        <li class="device-nav-group">
+                            <span class="device-nav-heading">Tablet</span>
+                            <a href="device-ipad.html">iPad</a>
+                            <a href="device-samsung-tablet.html">Samsung tablet</a>
+                            <a href="device-lenovo-tablet.html">Lenovo tablet</a>
+                        </li>
+                        <li class="device-nav-group">
+                            <span class="device-nav-heading">Smartphone</span>
+                            <a href="device-iphone.html">iPhone</a>
+                            <a href="device-google-pixel.html">Google Pixel</a>
+                            <a href="device-huawei.html">Huawei</a>
+                            <a href="device-sony-xperia.html">Sony Xperia</a>
+                        </li>
+                        <li class="device-nav-group">
+                            <span class="device-nav-heading">Laptop</span>
+                            <a href="device-macbook.html">MacBook</a>
+                            <a href="device-dell-laptop.html">Dell laptop</a>
+                            <a href="device-hp-laptop.html">HP laptop</a>
+                            <a href="device-lenovo-laptop.html">Lenovo laptop</a>
+                            <a href="device-acer-laptop.html">Acer laptop</a>
+                            <a href="device-samsung-laptop.html">Samsung laptop</a>
+                        </li>
+                        <li class="device-nav-group">
+                            <span class="device-nav-heading">Console</span>
+                            <a href="device-ps5.html">PlayStation 5</a>
+                            <a href="device-xbox.html">Xbox</a>
+                        </li>
+                        <li class="device-nav-all"><a href="devices.html">All devices</a></li>
+                    </ul>
+                </li>
                 <li><a href="trade-in.html">Trade-In & Cash</a></li>
                 <li><a href="call-out-services.html">Call-Out Repairs</a></li>
                 <li><a href="catalogue.html">Product Catalogue</a></li>
@@ -81,110 +113,18 @@
                 <div class="hero-badge"><i class="fa-solid fa-screwdriver-wrench"></i> HP laptop repair</div>
                 <h1>HP laptop repair in West Kensington</h1>
                 <p>HP screens, DC jacks, HDMI, keyboards and spills. Bring the charger if you have it — power faults are often the brick, the jack, or the pack.</p>
-                <div class="hero-actions" style="margin-top:18px;">
-                    <a href="#device-enquiry" class="btn btn-primary">Book this HP laptop</a>
-                    <a href="https://wa.me/447448885755" target="_blank" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-                </div>
             </div>
             <div class="device-hero-photo">
-                <img src="assets/devices/hp-laptop.webp" alt="HP laptop" width="280" height="280" decoding="async">
+                <img src="assets/devices/hp-laptop.webp" alt="HP laptop" width="640" height="480" decoding="async">
             </div>
         </div>
     </section>
-    <section class="sl-section" id="select-device">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="section-tag">Step 1</span>
-                <h2>Select your device</h2>
-                <p>Pick the product. Then choose the model on that page and send the fault.</p>
-            </div>
-            <div class="device-pick-grid">
-                <a class="device-pick-card" href="device-iphone.html">
-                    <div class="device-pick-photo"><img src="assets/devices/iphone.jpg" alt="iPhone" loading="lazy" decoding="async"></div>
-                    <h3>iPhone</h3>
-                </a>
-                <a class="device-pick-card" href="device-google-pixel.html">
-                    <div class="device-pick-photo"><img src="assets/devices/google-pixel.webp" alt="Google Pixel" loading="lazy" decoding="async"></div>
-                    <h3>Google Pixel</h3>
-                </a>
-                <a class="device-pick-card" href="device-huawei.html">
-                    <div class="device-pick-photo"><img src="assets/devices/huawei-phone.jpg" alt="Huawei" loading="lazy" decoding="async"></div>
-                    <h3>Huawei</h3>
-                </a>
-                <a class="device-pick-card" href="device-sony-xperia.html">
-                    <div class="device-pick-photo"><img src="assets/devices/sony-xperia.webp" alt="Sony Xperia" loading="lazy" decoding="async"></div>
-                    <h3>Sony Xperia</h3>
-                </a>
-                <a class="device-pick-card" href="device-ipad.html">
-                    <div class="device-pick-photo"><img src="assets/devices/ipad.webp" alt="iPad" loading="lazy" decoding="async"></div>
-                    <h3>iPad</h3>
-                </a>
-                <a class="device-pick-card" href="device-samsung-tablet.html">
-                    <div class="device-pick-photo"><img src="assets/devices/samsung-tablet.webp" alt="Samsung tablet" loading="lazy" decoding="async"></div>
-                    <h3>Samsung tablet</h3>
-                </a>
-                <a class="device-pick-card" href="device-lenovo-tablet.html">
-                    <div class="device-pick-photo"><img src="assets/devices/lenovo-tablet.webp" alt="Lenovo tablet" loading="lazy" decoding="async"></div>
-                    <h3>Lenovo tablet</h3>
-                </a>
-                <a class="device-pick-card" href="device-macbook.html">
-                    <div class="device-pick-photo"><img src="assets/devices/macbook.webp" alt="MacBook" loading="lazy" decoding="async"></div>
-                    <h3>MacBook</h3>
-                </a>
-                <a class="device-pick-card" href="device-dell-laptop.html">
-                    <div class="device-pick-photo"><img src="assets/devices/dell-laptop.webp" alt="Dell laptop" loading="lazy" decoding="async"></div>
-                    <h3>Dell laptop</h3>
-                </a>
-                <a class="device-pick-card is-current" href="device-hp-laptop.html">
-                    <div class="device-pick-photo"><img src="assets/devices/hp-laptop.webp" alt="HP laptop" loading="lazy" decoding="async"></div>
-                    <h3>HP laptop</h3>
-                </a>
-                <a class="device-pick-card" href="device-lenovo-laptop.html">
-                    <div class="device-pick-photo"><img src="assets/devices/lenovo-laptop.webp" alt="Lenovo laptop" loading="lazy" decoding="async"></div>
-                    <h3>Lenovo laptop</h3>
-                </a>
-                <a class="device-pick-card" href="device-acer-laptop.html">
-                    <div class="device-pick-photo"><img src="assets/devices/acer-laptop.webp" alt="Acer laptop" loading="lazy" decoding="async"></div>
-                    <h3>Acer laptop</h3>
-                </a>
-                <a class="device-pick-card" href="device-samsung-laptop.html">
-                    <div class="device-pick-photo"><img src="assets/devices/samsung-laptop.webp" alt="Samsung laptop" loading="lazy" decoding="async"></div>
-                    <h3>Samsung laptop</h3>
-                </a>
-                <a class="device-pick-card" href="device-ps5.html">
-                    <div class="device-pick-photo"><img src="assets/devices/ps5.webp" alt="PlayStation 5" loading="lazy" decoding="async"></div>
-                    <h3>PlayStation 5</h3>
-                </a>
-                <a class="device-pick-card" href="device-xbox.html">
-                    <div class="device-pick-photo"><img src="assets/devices/xbox.jpg" alt="Xbox" loading="lazy" decoding="async"></div>
-                    <h3>Xbox</h3>
-                </a>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="sl-section alt" id="sl-trust">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="section-tag">Why this shop</span>
-                <h2>Before you book</h2>
-            </div>
-            <div class="sl-grid-4">
-                <article class="sl-trust"><i class="fa-solid fa-star" aria-hidden="true"></i><h3>4.7 on Google</h3><p>66 reviews for this North End Road shop.</p></article>
-                <article class="sl-trust"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><h3>West Kensington</h3><p>175b North End Rd, London W14 9NL. Walk in seven days.</p></article>
-                <article class="sl-trust"><i class="fa-solid fa-clock" aria-hidden="true"></i><h3>Open late</h3><p>Mon–Sat 9am–10pm. Sunday 10am–9pm.</p></article>
-                <article class="sl-trust"><i class="fa-solid fa-phone" aria-hidden="true"></i><h3>Talk to the shop</h3><p>Call or WhatsApp 07448 885755 before you travel if you want to check parts.</p></article>
-            </div>
-        </div>
-    </section>
-
-    <section class="sl-section">
+    <section class="sl-section" id="common-faults">
         <div class="container">
             <div class="section-header text-center">
                 <span class="section-tag">Common faults</span>
-                <h2>Screen, ports, water, power — whatever is actually wrong</h2>
-                <p>Tell us the fault on the form. These are the jobs we see most on a HP laptop.</p>
+                <h2>What we see most on this HP laptop</h2>
+                <p>Tell us the fault on the form. These are the jobs we see most on this device.</p>
             </div>
             <div class="device-issue-grid">
                 <article class="sl-card"><h3>Screen</h3><p>Cracks, flicker or a black lid. Quoted for that HP panel after inspection.</p></article><article class="sl-card"><h3>HDMI and ports</h3><p>No external display, or USB that died. Tested in store before a repair.</p></article><article class="sl-card"><h3>Power jack and battery</h3><p>Only works plugged in, or the barrel is loose. We test the charger too.</p></article><article class="sl-card"><h3>Liquid on the keyboard</h3><p>Power off. We open it, look for corrosion, and quote keys vs board separately.</p></article>
@@ -208,26 +148,42 @@
         </div>
     </section>
 
+
+    <section class="sl-section alt" id="sl-trust">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Why this shop</span>
+                <h2>Before you book</h2>
+            </div>
+            <div class="sl-grid-4">
+                <article class="sl-trust"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i><h3>Quote first</h3><p>We look at the device and give a price before any work starts.</p></article>
+                <article class="sl-trust"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><h3>West Kensington</h3><p>175b North End Rd, London W14 9NL. Walk in seven days.</p></article>
+                <article class="sl-trust"><i class="fa-solid fa-clock" aria-hidden="true"></i><h3>Open late</h3><p>Mon–Sat 9am–10pm. Sunday 10am–9pm.</p></article>
+                <article class="sl-trust"><i class="fa-solid fa-phone" aria-hidden="true"></i><h3>Talk to the shop</h3><p>Call or WhatsApp 07448 885755 before you travel if you want to check parts.</p></article>
+            </div>
+        </div>
+    </section>
+
     <section class="sl-section alt" id="device-enquiry">
         <div class="container">
             <div class="sl-form-wrap">
                 <div>
-                    <span class="section-tag">Book this HP laptop</span>
+                    <span class="section-tag">Booking enquiry</span>
                     <h2>Send the model and the fault</h2>
-                    <p class="sl-note">This form is for a HP laptop. Click a model, describe the issue, leave your number, and say if you will walk in or want a call-out.</p>
-                    <div class="device-model-chips">
-                        <button type="button" class="device-model-chip is-active" data-model="Pavilion">Pavilion</button><button type="button" class="device-model-chip" data-model="Envy">Envy</button><button type="button" class="device-model-chip" data-model="Spectre">Spectre</button><button type="button" class="device-model-chip" data-model="EliteBook">EliteBook</button><button type="button" class="device-model-chip" data-model="OMEN">OMEN</button><button type="button" class="device-model-chip" data-model="Other / not sure">Other / not sure</button>
-                    </div>
-                    <div class="sl-cta-row">
-                        <a class="btn btn-primary" href="tel:07448885755"><i class="fa-solid fa-phone"></i> 07448 885755</a>
-                    </div>
+                    <p class="sl-note">This form is for HP laptop. Choose the model when you open the list, describe the issue, leave your number, and say if you will walk in or want a call-out.</p>
                 </div>
                 <form class="enquiry-form" onsubmit="handleEnquiry(event)">
                     <input type="hidden" id="deviceFamily" value="HP laptop">
                     <div class="form-group">
                         <label for="model">Model</label>
                         <select id="model" required>
-                            <option value="Pavilion" selected>Pavilion</option><option value="Envy">Envy</option><option value="Spectre">Spectre</option><option value="EliteBook">EliteBook</option><option value="OMEN">OMEN</option><option value="Other / not sure">Other / not sure</option>
+                            <option value="" selected disabled>Select your model</option>
+                            <option value="Pavilion">Pavilion</option>
+                            <option value="Envy">Envy</option>
+                            <option value="Spectre">Spectre</option>
+                            <option value="EliteBook">EliteBook</option>
+                            <option value="OMEN">OMEN</option>
+                            <option value="Other / not sure">Other / not sure</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -249,8 +205,24 @@
                     <p id="formFeedback" class="form-feedback"></p>
                 </form>
             </div>
+            <div class="hero-actions device-after-form-ctas">
+                <a class="btn btn-primary" href="tel:07448885755"><i class="fa-solid fa-phone"></i> Call 07448 885755</a>
+                <a class="btn btn-whatsapp" href="https://wa.me/447448885755" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            </div>
         </div>
     </section>
+
+    <section class="section" id="store-map">
+        <div class="container text-center">
+            <span class="section-tag"><i class="fa-solid fa-map-location-dot"></i> Walk-in customers</span>
+            <h2>Find us on North End Road</h2>
+            <p class="store-map-lead">175b North End Rd, West Kensington, London W14 9NL. No appointment needed — bring the device in.</p>
+            <div class="store-map-frame">
+                <iframe src="https://maps.google.com/maps?q=175b+North+End+Rd,+London+W14+9NL&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mobile and Laptop Repairs on Google Maps"></iframe>
+            </div>
+        </div>
+    </section>
+
 
     <footer class="footer" style="background: #050505; padding: 50px 20px 20px 20px; border-top: 1px solid rgba(225,29,42,0.15);">
         <div class="container footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto;">

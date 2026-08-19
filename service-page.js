@@ -119,13 +119,21 @@
 
     var trust = document.getElementById('sl-trust') || mount.lastElementChild;
     var existingForm = findExistingFormSection(mount);
+    var formSection = null;
     if (existingForm && trust) {
         existingForm.classList.add('sl-moved-form');
         trust.after(existingForm);
+        formSection = existingForm;
     } else if (trust) {
         var wrap = document.createElement('div');
         wrap.innerHTML = buildFormHtml(data);
-        trust.after(wrap.firstElementChild);
+        formSection = wrap.firstElementChild;
+        trust.after(formSection);
+    }
+
+    var map = document.getElementById('store-map');
+    if (map && formSection) {
+        formSection.after(map);
     }
 
     var existingFaq = document.querySelector('.faq-accordion-container');
