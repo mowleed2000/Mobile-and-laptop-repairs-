@@ -178,6 +178,17 @@ body {
     text-decoration: none;
 }
 
+.top-bar-highlight {
+    color: #ffffff;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.top-bar-highlight i {
+    color: var(--primary);
+}
+
 /* Navbar */
 .navbar {
     background: rgba(16, 4, 4, 0.98);
@@ -1076,6 +1087,10 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: center top;
+}
+
+.tradein-steps-grid .service-card:first-child:hover .service-card-img {
+    transform: none;
 }
 
 .tradein-steps-grid .service-card-body,
