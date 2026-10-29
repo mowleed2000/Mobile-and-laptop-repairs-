@@ -43,6 +43,8 @@
         }
         if (product.flavors && product.flavors.length) {
             parts.push('<span class="flavour-label" style="color:#f87171;font-weight:700;">' + product.flavors.length + ' flavours in store</span>');
+        } else if (product.models && product.models.length) {
+            parts.push('<span class="models-label" style="color:#38bdf8;font-weight:700;"><i class="fa-solid fa-mobile-screen"></i> Fits ' + product.models.length + ' phone models</span>');
         } else if (product.variants && product.variants.length) {
             var vars = product.variants.filter(function (v) { return v !== product.price; });
             if (vars.length) {
@@ -59,6 +61,14 @@
         var html = '<a href="tel:07448885755" class="btn-call-shop"><i class="fa-solid fa-phone"></i> CALL STORE FOR PRICE & STOCK</a>';
         if (product.flavors && product.flavors.length) {
             html += '<button type="button" onclick="openFlavorModal(' + index + ')" class="btn-view-flavors"><i class="fa-solid fa-eye"></i> VIEW AVAILABLE FLAVORS</button>';
+        } else if (product.models && product.models.length) {
+            html += '<button type="button" onclick="openFlavorModal(' + index + ')" class="btn-view-flavors" style="background:rgba(56,189,248,0.12);color:#38bdf8;border:1px solid rgba(56,189,248,0.3);"><i class="fa-solid fa-mobile-screen"></i> VIEW ' + product.models.length + ' COMPATIBLE MODELS</button>';
+            html += '<select class="card-model-select" onchange="this.blur()" style="width:100%;margin-top:8px;padding:6px 10px;background:#1e293b;border:1px solid #334155;border-radius:8px;color:#f8fafc;font-size:0.8rem;outline:none;cursor:pointer;">';
+            html += '<option value="">📱 Select model (' + product.models.length + ' in stock)...</option>';
+            product.models.forEach(function (m) {
+                html += '<option value="' + escapeHtml(m) + '">' + escapeHtml(m) + ' — In Stock</option>';
+            });
+            html += '</select>';
         }
         return html;
     }
@@ -77,7 +87,10 @@
                 var variantMatch = (product.variants || []).some(function (v) {
                     return String(v).toLowerCase().indexOf(q) !== -1;
                 });
-                var match = nameMatch || brandMatch || descMatch || flavorMatch || variantMatch;
+                var modelMatch = (product.models || []).some(function (m) {
+                    return String(m).toLowerCase().indexOf(q) !== -1;
+                });
+                var match = nameMatch || brandMatch || descMatch || flavorMatch || variantMatch || modelMatch;
                 if (!match) return false;
             }
             return currentCategory === 'All Products' || product.category === currentCategory;
@@ -309,13 +322,28 @@
         modalCat.textContent = ageRestricted ? product.category + ' • 18+' : product.category;
         modalTitle.textContent = product.name;
 
+        var isModels = product.models && product.models.length && (!product.flavors || !product.flavors.length);
+        var modalHeading = document.getElementById('modalHeading') || modal.querySelector('h4');
+        if (modalHeading) {
+            modalHeading.textContent = isModels
+                ? 'Compatible In-Store Phone Models (' + product.models.length + ' Models):'
+                : 'Available In-Store Flavors:';
+        }
+
         chipsWrap.innerHTML = '';
-        var flavors = product.flavors && product.flavors.length ? product.flavors : ['Popular In-Store Flavor Selection'];
+        var items = isModels
+            ? product.models
+            : (product.flavors && product.flavors.length ? product.flavors : ['Popular In-Store Flavor Selection']);
         var frag = document.createDocumentFragment();
-        flavors.forEach(function (flavor) {
+        items.forEach(function (item) {
             var chip = document.createElement('span');
             chip.className = 'flavor-chip-tag';
-            chip.textContent = flavor;
+            if (isModels) {
+                chip.style.borderColor = 'rgba(56,189,248,0.45)';
+                chip.style.background = 'rgba(56,189,248,0.1)';
+                chip.style.color = '#38bdf8';
+            }
+            chip.textContent = item;
             frag.appendChild(chip);
         });
         chipsWrap.appendChild(frag);
