@@ -2,10 +2,6 @@
     'use strict';
 
     var currentCategory = 'All Products';
-    var sentinelObserver = null;
-    var pageSize = 18;
-    var visibleCount = pageSize;
-    var renderedUntil = 0;
     var searchTimer = null;
     var indexMap = null;
 
@@ -152,18 +148,7 @@
         return card;
     }
 
-    function clearSentinel() {
-        var grid = document.getElementById('catalogueGrid');
-        if (!grid) return;
-        var old = grid.querySelector('#catalogue-sentinel');
-        if (old) old.remove();
-        var note = grid.querySelector('.catalogue-more-note');
-        if (note) note.remove();
-        var empty = grid.querySelector('.catalogue-empty');
-        if (empty) empty.remove();
-    }
-
-    function renderCatalogue(append) {
+    function renderCatalogue() {
         var grid = document.getElementById('catalogueGrid');
         if (!grid || typeof productsData === 'undefined') return;
 
@@ -173,19 +158,10 @@
         var total = list.length;
         var map = getIndexMap();
 
-        if (!append) {
-            renderedUntil = 0;
-            visibleCount = pageSize;
-            grid.innerHTML = '';
-        } else {
-            clearSentinel();
-        }
-
-        var start = renderedUntil;
-        var end = Math.min(visibleCount, list.length);
+        grid.innerHTML = '';
         var newCards = document.createDocumentFragment();
 
-        for (var i = start; i < end; i++) {
+        for (var i = 0; i < total; i++) {
             var product = list[i];
             var key = product.name + '|' + product.category + '|' + product.image;
             var index = map ? map[key] : undefined;
@@ -193,21 +169,7 @@
             newCards.appendChild(makeCard(product, index, i));
         }
 
-        renderedUntil = end;
         grid.appendChild(newCards);
-
-        if (end < total) {
-            var sentinel = document.createElement('div');
-            sentinel.id = 'catalogue-sentinel';
-            sentinel.style.cssText = 'grid-column:1/-1;height:1px;';
-            grid.appendChild(sentinel);
-
-            var note = document.createElement('p');
-            note.className = 'catalogue-more-note';
-            note.style.cssText = 'grid-column:1/-1;text-align:center;color:#94a3b8;margin:16px 0;font-size:0.92rem;';
-            note.textContent = 'Showing ' + end + ' of ' + total + ' items — keep scrolling to load more.';
-            grid.appendChild(note);
-        }
 
         if (!total) {
             var empty = document.createElement('p');
@@ -217,24 +179,6 @@
             grid.appendChild(empty);
         }
 
-        observeSentinel();
-    }
-
-    function observeSentinel() {
-        if (sentinelObserver) {
-            sentinelObserver.disconnect();
-            sentinelObserver = null;
-        }
-        var sentinel = document.getElementById('catalogue-sentinel');
-        if (!sentinel) return;
-        sentinelObserver = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (!entry.isIntersecting) return;
-                visibleCount += pageSize;
-                renderCatalogue(true);
-            });
-        }, { rootMargin: '1600px 0px' });
-        sentinelObserver.observe(sentinel);
     }
 
     function selectCategory(cat, el) {
@@ -245,13 +189,13 @@
         if (el) {
             el.classList.add('active');
         }
-        renderCatalogue(false);
+        renderCatalogue();
     }
 
     function filterProducts() {
         clearTimeout(searchTimer);
         searchTimer = setTimeout(function () {
-            renderCatalogue(false);
+            renderCatalogue();
         }, 120);
     }
 
@@ -340,13 +284,6 @@
         }
     });
 
-    window.addEventListener('pagehide', function () {
-        if (sentinelObserver) {
-            sentinelObserver.disconnect();
-            sentinelObserver = null;
-        }
-    });
-
     document.addEventListener('DOMContentLoaded', function () {
         if (!document.getElementById('catalogueGrid')) return;
 
@@ -377,7 +314,7 @@
                 }
             }
 
-            renderCatalogue(false);
+            renderCatalogue();
         }
 
         window.requestAnimationFrame(function () {

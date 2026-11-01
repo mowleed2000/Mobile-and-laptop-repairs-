@@ -33,7 +33,7 @@
     var prefetched = Object.create(null);
     function prefetchLink(link) {
         if (!link || !('relList' in HTMLLinkElement.prototype)) return;
-        if (navigator.connection && (navigator.connection.saveData || /(^|-)2g$/.test(navigator.connection.effectiveType || ''))) return;
+        if (navigator.connection && (navigator.connection.saveData || /(^|-)3g$|(^|-)2g$/.test(navigator.connection.effectiveType || ''))) return;
         var url; try { url = new URL(link.href, location.href); } catch (_) { return; }
         if (url.origin !== location.origin || url.pathname === location.pathname || prefetched[url.href] || !/\.html?$/.test(url.pathname)) return;
         prefetched[url.href] = true;
@@ -47,6 +47,23 @@
     document.addEventListener('pointerover', prefetchNavigationIntent, {passive:true});
     document.addEventListener('pointerdown', prefetchNavigationIntent, {passive:true});
     document.addEventListener('focusin', prefetchNavigationIntent);
+
+    function prefetchPrimaryPages() {
+        var links = document.querySelectorAll('.nav-links > li > a[href]');
+        links.forEach(prefetchLink);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var connection = navigator.connection;
+        if (connection && (connection.saveData || /(^|-)3g$|(^|-)2g$/.test(connection.effectiveType || ''))) return;
+        window.setTimeout(function () {
+            if ('requestIdleCallback' in window) {
+                window.requestIdleCallback(prefetchPrimaryPages, {timeout: 1800});
+            } else {
+                prefetchPrimaryPages();
+            }
+        }, 700);
+    }, {once:true});
 
     document.addEventListener('DOMContentLoaded', function () {
         var menuBtn = document.getElementById('mobileMenuBtn');
