@@ -55,7 +55,7 @@
             }
         }
         if (!parts.length) {
-            return 'Call store for price & stock at 175b North End Rd, London W14 9NL';
+            return '<span class="catalogue-enquire">Call store for current price & availability</span>';
         }
         return parts.join(' • ');
     }
@@ -66,15 +66,8 @@
             html += '<button type="button" onclick="openFlavorModal(' + index + ')" class="btn-view-flavors"><i class="fa-solid fa-eye"></i> VIEW AVAILABLE FLAVORS</button>';
         } else if (product.models && product.models.length) {
             var phoneListing = product.category === 'Smartphones';
-            var optionLabel = phoneListing ? 'AVAILABLE OPTIONS' : 'COMPATIBLE MODELS';
-            var selectLabel = phoneListing ? 'option (' + product.models.length + ' available)...' : 'model (' + product.models.length + ' in stock)...';
-            html += '<button type="button" onclick="openFlavorModal(' + index + ')" class="btn-view-flavors" style="background:rgba(56,189,248,0.12);color:#38bdf8;border:1px solid rgba(56,189,248,0.3);"><i class="fa-solid fa-mobile-screen"></i> VIEW ' + product.models.length + ' ' + optionLabel + '</button>';
-            html += '<select class="card-model-select" onchange="this.blur()" style="width:100%;margin-top:8px;padding:6px 10px;background:#1e293b;border:1px solid #334155;border-radius:8px;color:#f8fafc;font-size:0.8rem;outline:none;cursor:pointer;">';
-            html += '<option value="">📱 Select ' + selectLabel + '</option>';
-            product.models.forEach(function (m) {
-                html += '<option value="' + escapeHtml(m) + '">' + escapeHtml(m) + (phoneListing ? '' : ' — In Stock') + '</option>';
-            });
-            html += '</select>';
+            var optionLabel = phoneListing ? 'VIEW ' + product.models.length + ' IN-STORE OPTIONS' : 'VIEW ' + product.models.length + ' COMPATIBLE MODELS';
+            html += '<button type="button" onclick="openFlavorModal(' + index + ')" class="btn-view-flavors btn-view-models"><i class="fa-solid fa-mobile-screen"></i> ' + optionLabel + '</button>';
         }
         return html;
     }
@@ -189,8 +182,8 @@
             '</div>' +
             '<div class="catalogue-card-content">' +
                 '<h3>' + escapeHtml(product.name) + '</h3>' +
-                '<p class="product-summary-text">' + buildProductSummary(product) + '</p>' +
-                buildActionHtml(product, index) +
+            '<p class="product-summary-text">' + buildProductSummary(product) + '</p>' +
+                '<div class="catalogue-card-actions">' + buildActionHtml(product, index) + '</div>' +
                 '<span class="in-stock-badge">In stock</span>' +
             '</div>';
 
