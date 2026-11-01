@@ -2,7 +2,6 @@
     'use strict';
 
     var currentCategory = 'All Products';
-    var imageObserver = null;
     var sentinelObserver = null;
     var pageSize = 18;
     var visibleCount = pageSize;
@@ -36,39 +35,34 @@
         return indexMap;
     }
 
-    function buildProductSummary(product) {
+    function buildProductSummary(product, index) {
         var parts = [];
         if (product.price && product.price !== 'Enquire for price') {
             parts.push('<span class="price-highlight" style="color:#ff1f33;font-weight:800;font-size:1.02rem;">' + escapeHtml(product.price) + '</span>');
+        } else {
+            parts.push('<span class="catalogue-enquire">Call for current price</span>');
         }
+        var infoLabel = '';
         if (product.flavors && product.flavors.length) {
-            parts.push('<span class="flavour-label" style="color:#f87171;font-weight:700;">' + product.flavors.length + ' flavours in store</span>');
+            infoLabel = 'View flavour examples';
+            parts.push('<span class="flavour-label">' + escapeHtml(product.flavorNote || 'Flavour examples available in store') + '</span>');
         } else if (product.models && product.models.length) {
             var modelSummary = product.category === 'Smartphones'
                 ? product.models.length + ' in-store options'
-                : 'Fits ' + product.models.length + ' phone models';
-            parts.push('<span class="models-label" style="color:#38bdf8;font-weight:700;"><i class="fa-solid fa-mobile-screen"></i> ' + modelSummary + '</span>');
+                : 'Compatible with ' + product.models.length + ' phone models';
+            infoLabel = product.category === 'Smartphones' ? 'View options' : 'View compatible models';
+            parts.push('<span class="models-label">' + modelSummary + '</span>');
         } else if (product.variants && product.variants.length) {
-            var vars = product.variants.filter(function (v) { return v !== product.price; });
-            if (vars.length) {
-                parts.push(escapeHtml(vars.slice(0, 3).join(' • ')));
-            }
+            infoLabel = product.category === 'Smartphones' ? 'View phone details' : 'View product details';
+            if (product.category === 'Smartphones') parts.push('<span class="models-label">Phone details available</span>');
         }
-        if (!parts.length) {
-            return '<span class="catalogue-enquire">Call store for current price & availability</span>';
-        }
-        return parts.join(' • ');
+        if (product.detailNote && product.category === 'Smartphones') parts.push('<span class="catalogue-enquire">' + escapeHtml(product.detailNote) + '</span>');
+        var info = infoLabel ? ' <button type="button" class="catalogue-info-link" onclick="openFlavorModal(' + index + ')">' + escapeHtml(infoLabel) + '</button>' : '';
+        return '<span class="product-summary-lines">' + parts.join('<br>') + '</span>' + info;
     }
 
     function buildActionHtml(product, index) {
         var html = '<a href="tel:07448885755" class="btn-call-shop"><i class="fa-solid fa-phone"></i> CALL STORE FOR PRICE & STOCK</a>';
-        if (product.flavors && product.flavors.length) {
-            html += '<button type="button" onclick="openFlavorModal(' + index + ')" class="btn-view-flavors"><i class="fa-solid fa-eye"></i> VIEW AVAILABLE FLAVORS</button>';
-        } else if (product.models && product.models.length) {
-            var phoneListing = product.category === 'Smartphones';
-            var optionLabel = phoneListing ? 'VIEW ' + product.models.length + ' IN-STORE OPTIONS' : 'VIEW ' + product.models.length + ' COMPATIBLE MODELS';
-            html += '<button type="button" onclick="openFlavorModal(' + index + ')" class="btn-view-flavors btn-view-models"><i class="fa-solid fa-mobile-screen"></i> ' + optionLabel + '</button>';
-        }
         return html;
     }
 
@@ -92,39 +86,7 @@
                 var match = nameMatch || brandMatch || descMatch || flavorMatch || variantMatch || modelMatch;
                 if (!match) return false;
             }
-            return currentCategory === 'All Products' || product.category === currentCategory;
-        });
-    }
-
-    function observeNewImages(root) {
-        var images = root.querySelectorAll('img[data-src]');
-        if (!images.length) return;
-
-        function loadImg(img) {
-            var src = img.getAttribute('data-src');
-            if (!src) return;
-            img.loading = 'eager';
-            img.setAttribute('src', src);
-            img.removeAttribute('data-src');
-        }
-
-        if (!('IntersectionObserver' in window)) {
-            images.forEach(loadImg);
-            return;
-        }
-
-        if (!imageObserver) {
-            imageObserver = new IntersectionObserver(function (entries) {
-                entries.forEach(function (entry) {
-                    if (!entry.isIntersecting) return;
-                    loadImg(entry.target);
-                    imageObserver.unobserve(entry.target);
-                });
-            }, { rootMargin: '1200px 0px', threshold: 0.01 });
-        }
-
-        images.forEach(function (img) {
-            imageObserver.observe(img);
+            return currentCategory === 'All Products' || product.category === currentCategory || (currentCategory === 'Vapes' && /^(Prefilled Pod Kits|Starter Vape Kits & Refillable Devices)$/.test(product.category));
         });
     }
 
@@ -162,29 +124,29 @@
         var imgHtml;
         if (product.image) {
             var src = encodeImagePath(product.image);
-            if (position < 1) {
-                imgHtml = '<img src="' + src + '" alt="' + escapeHtml(product.name) + '" width="400" height="400" decoding="async" fetchpriority="high">';
+            if (position < 3) {
+                imgHtml = '<img src="' + src + '" alt="' + escapeHtml(product.name) + '" width="400" height="400" decoding="async" loading="eager"' + (position === 0 ? ' fetchpriority="high"' : '') + '>';
             } else {
-                imgHtml = '<img data-src="' + src + '" alt="' + escapeHtml(product.name) + '" width="400" height="400" decoding="async" loading="lazy">';
+                imgHtml = '<img src="' + src + '" alt="' + escapeHtml(product.name) + '" width="400" height="400" decoding="async" loading="lazy">';
             }
         } else {
             imgHtml = '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:#94a3b8;font-size:0.85rem;text-align:center;padding:12px;"><i class="fa-solid fa-camera" style="font-size:2.2rem;margin-bottom:8px;color:#e11d2a;"></i><span>Photo arriving soon<br>In stock in store</span></div>';
         }
 
-        var ageRestricted = ['Vape Kits', 'Vape Refills', 'E-Liquids', 'Nicotine Pouches'].indexOf(product.category) !== -1;
+        var ageRestricted = ['Prefilled Pod Kits', 'Starter Vape Kits & Refillable Devices', 'E-Liquids', 'Nicotine Pouches'].indexOf(product.category) !== -1;
         var ageBadge = ageRestricted ? '<span class="age-18-badge" title="18+ only" style="position:absolute;top:10px;right:10px;background:#e11d2a;color:#fff;font-size:0.72rem;font-weight:800;padding:2px 8px;border-radius:100px;">18+</span>' : '';
 
         card.innerHTML =
             '<div class="catalogue-card-image" style="position:relative;">' +
-                '<span class="category-tag-badge">' + escapeHtml(product.category) + '</span>' +
+                '<span class="category-tag-badge">' + escapeHtml(product.cardTypeLabel || product.category) + '</span>' +
                 ageBadge +
                 imgHtml +
             '</div>' +
             '<div class="catalogue-card-content">' +
                 '<h3>' + escapeHtml(product.name) + '</h3>' +
-            '<p class="product-summary-text">' + buildProductSummary(product) + '</p>' +
+            '<p class="product-summary-text">' + buildProductSummary(product, index) + '</p>' +
                 '<div class="catalogue-card-actions">' + buildActionHtml(product, index) + '</div>' +
-                '<span class="in-stock-badge">In stock</span>' +
+                '<span class="in-stock-badge' + (product.availability ? ' availability-check' : '') + '">' + escapeHtml(product.availability || 'In stock') + '</span>' +
             '</div>';
 
         return card;
@@ -215,10 +177,6 @@
             renderedUntil = 0;
             visibleCount = pageSize;
             grid.innerHTML = '';
-            if (imageObserver) {
-                imageObserver.disconnect();
-                imageObserver = null;
-            }
         } else {
             clearSentinel();
         }
@@ -259,7 +217,6 @@
             grid.appendChild(empty);
         }
 
-        observeNewImages(grid);
         observeSentinel();
     }
 
@@ -276,7 +233,7 @@
                 visibleCount += pageSize;
                 renderCatalogue(true);
             });
-        }, { rootMargin: '900px 0px' });
+        }, { rootMargin: '1600px 0px' });
         sentinelObserver.observe(sentinel);
     }
 
@@ -318,24 +275,25 @@
             modalImg.style.display = 'none';
         }
 
-        var ageRestricted = ['Vape Kits', 'Vape Refills', 'E-Liquids', 'Nicotine Pouches'].indexOf(product.category) !== -1;
+        var ageRestricted = ['Prefilled Pod Kits', 'Starter Vape Kits & Refillable Devices', 'E-Liquids', 'Nicotine Pouches'].indexOf(product.category) !== -1;
         modalCat.textContent = ageRestricted ? product.category + ' • 18+' : product.category;
         modalTitle.textContent = product.name;
 
         var isModels = product.models && product.models.length && (!product.flavors || !product.flavors.length);
+        var isPhoneDetails = product.category === 'Smartphones' && product.variants && product.variants.length;
         var modalHeading = document.getElementById('modalHeading') || modal.querySelector('h4');
         if (modalHeading) {
             modalHeading.textContent = isModels
                 ? (product.category === 'Smartphones'
                     ? 'Available In-Store Options (' + product.models.length + '):'
                     : 'Compatible In-Store Phone Models (' + product.models.length + ' Models):')
-                : 'Available In-Store Flavors:';
+                : (isPhoneDetails ? 'Phone details:' : (product.flavors && product.flavors.length ? 'Flavour examples:' : 'Product details:'));
         }
 
         chipsWrap.innerHTML = '';
         var items = isModels
             ? product.models
-            : (product.flavors && product.flavors.length ? product.flavors : ['Popular In-Store Flavor Selection']);
+            : (isPhoneDetails ? product.variants : (product.flavors && product.flavors.length ? product.flavors : (product.variants && product.variants.length ? product.variants : [])));
         var frag = document.createDocumentFragment();
         items.forEach(function (item) {
             var chip = document.createElement('span');
@@ -349,6 +307,16 @@
             frag.appendChild(chip);
         });
         chipsWrap.appendChild(frag);
+
+        if (product.flavorNote || product.detailNote || product.availability || !product.price || product.price === 'Enquire for price') {
+            var note = document.createElement('p');
+            note.className = 'catalogue-modal-note';
+            note.textContent = [product.flavorNote, product.detailNote, product.availability, (!product.price || product.price === 'Enquire for price') ? 'Call to confirm current price and availability.' : ''].filter(Boolean).join(' ');
+            chipsWrap.appendChild(note);
+        }
+
+        var stockNote = modal.querySelector('.catalogue-modal-stock-note');
+        if (stockNote) stockNote.textContent = product.availability || 'Call to confirm current price and availability.';
 
         modal.style.display = 'flex';
     }
@@ -373,10 +341,6 @@
     });
 
     window.addEventListener('pagehide', function () {
-        if (imageObserver) {
-            imageObserver.disconnect();
-            imageObserver = null;
-        }
         if (sentinelObserver) {
             sentinelObserver.disconnect();
             sentinelObserver = null;
@@ -393,7 +357,7 @@
             if (category) {
                 var targetCategory = category;
                 if (category === 'Laptops' || category === 'Tablets & Laptops') targetCategory = 'Laptops';
-                if (category === 'Vapes' || category === 'Vapes & Pod Systems') targetCategory = 'Vape Kits';
+                if (category === 'Vapes' || category === 'Vapes & Pod Systems' || category === 'Vape Kits') targetCategory = 'Vapes';
                 if (category === 'Accessories') targetCategory = 'Tech Accessories';
                 if (category === 'Smartphones') targetCategory = 'Smartphones';
                 if (category === 'Nicotine Pouches') targetCategory = 'Nicotine Pouches';
@@ -402,7 +366,7 @@
                 var foundItem = null;
                 document.querySelectorAll('.sidebar-nav-item').forEach(function (item) {
                     var label = (item.textContent || '').replace(/\s+/g, ' ').trim();
-                    if (label.indexOf(targetCategory) !== -1) {
+                    if (label.indexOf(targetCategory) !== -1 || (targetCategory === 'Vapes' && label.indexOf('Prefilled Pod Kits') !== -1)) {
                         foundItem = item;
                     }
                 });

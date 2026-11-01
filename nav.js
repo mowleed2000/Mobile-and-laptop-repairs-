@@ -33,13 +33,20 @@
     var prefetched = Object.create(null);
     function prefetchLink(link) {
         if (!link || !('relList' in HTMLLinkElement.prototype)) return;
+        if (navigator.connection && (navigator.connection.saveData || /(^|-)2g$/.test(navigator.connection.effectiveType || ''))) return;
         var url; try { url = new URL(link.href, location.href); } catch (_) { return; }
         if (url.origin !== location.origin || url.pathname === location.pathname || prefetched[url.href] || !/\.html?$/.test(url.pathname)) return;
         prefetched[url.href] = true;
         var hint = document.createElement('link'); hint.rel = 'prefetch'; hint.href = url.href; hint.as = 'document'; document.head.appendChild(hint);
     }
-    document.addEventListener('pointerover', function (e) { var a=e.target.closest && e.target.closest('a[href]'); if(a) prefetchLink(a); }, {passive:true});
-    document.addEventListener('focusin', function (e) { var a=e.target.closest && e.target.closest('a[href]'); if(a) prefetchLink(a); });
+    function prefetchNavigationIntent(e) {
+        var a = e.target.closest && e.target.closest('a[href]');
+        if (!a || !(a.matches('.logo') || a.closest('.nav-links'))) return;
+        prefetchLink(a);
+    }
+    document.addEventListener('pointerover', prefetchNavigationIntent, {passive:true});
+    document.addEventListener('pointerdown', prefetchNavigationIntent, {passive:true});
+    document.addEventListener('focusin', prefetchNavigationIntent);
 
     document.addEventListener('DOMContentLoaded', function () {
         var menuBtn = document.getElementById('mobileMenuBtn');
@@ -99,4 +106,3 @@
         });
     });
 })();
-

@@ -1,5 +1,5 @@
 // Official Mobile and Laptop Repairs in-store product catalogue
-// Generated from Product_Catalogue (2).docx
+// Source: shop-provided Product Catalogue (2)
 const productsData = [
   {
     "name": "iPhone 16 Pro",
@@ -10,14 +10,13 @@ const productsData = [
     "variants": [
       "512GB",
       "Unlocked",
-      "Grade A",
       "Battery Health 88%",
       "Titanium",
       "£835"
     ],
     "models": [],
     "flavors": [],
-    "description": "Apple iPhone 16 Pro — 512GB, Unlocked, Grade A, Battery Health 88%"
+    "description": "Apple iPhone 16 Pro — 512GB, Unlocked, Battery Health 88%"
   },
   {
     "name": "iPhone 14 Pro",
@@ -28,14 +27,13 @@ const productsData = [
     "variants": [
       "128GB",
       "Unlocked",
-      "Grade B",
       "Battery Health 85%",
       "Purple",
       "£390"
     ],
     "models": [],
     "flavors": [],
-    "description": "Apple iPhone 14 Pro — 128GB, Unlocked, Grade B, Battery Health 85%"
+    "description": "Apple iPhone 14 Pro — 128GB, Unlocked, Battery Health 85%"
   },
   {
     "name": "iPhone 14",
@@ -46,14 +44,13 @@ const productsData = [
     "variants": [
       "128GB",
       "Unlocked",
-      "Grade A",
       "Battery Health 90%",
       "Red",
       "£450"
     ],
     "models": [],
     "flavors": [],
-    "description": "Apple iPhone 14 — 128GB, Unlocked, Grade A, Battery Health 90%"
+    "description": "Apple iPhone 14 — 128GB, Unlocked, Battery Health 90%"
   },
   {
     "name": "iPhone 13 Pro Max",
@@ -65,18 +62,17 @@ const productsData = [
       "2 Units in Stock",
       "128GB",
       "Unlocked",
-      "Grade B",
       "Blue",
       "£410",
       "Gold",
       "£320"
     ],
     "models": [
-      "Blue • 128GB, Unlocked, Grade B • £410",
-      "Gold • 128GB, Unlocked, Grade B • £320"
+      "Blue • 128GB, Unlocked • £410",
+      "Gold • 128GB, Unlocked • £320"
     ],
     "flavors": [],
-    "description": "Apple iPhone 13 Pro Max. 2 units available in stock with multiple color & condition options: Blue • 128GB, Unlocked, Grade B • £410; Gold • 128GB, Unlocked, Grade B • £320."
+    "description": "Apple iPhone 13 Pro Max. 2 units available in stock with Available colour options: Blue • 128GB, Unlocked • £410; Gold • 128GB, Unlocked • £320."
   },
   {
     "name": "iPhone 13",
@@ -88,7 +84,6 @@ const productsData = [
       "2 Units in Stock",
       "128GB",
       "Unlocked",
-      "Grade A",
       "Battery Health 89%",
       "Green",
       "£295",
@@ -97,11 +92,11 @@ const productsData = [
       "£280"
     ],
     "models": [
-      "Green • 128GB, Unlocked, Grade A, Battery Health 89% • £295",
-      "White • 128GB, Unlocked, Grade A, Battery Health 90% • £280"
+      "Green • 128GB, Unlocked, Battery Health 89% • £295",
+      "White • 128GB, Unlocked, Battery Health 90% • £280"
     ],
     "flavors": [],
-    "description": "Apple iPhone 13. 2 units available in stock with multiple color & condition options: Green • 128GB, Unlocked, Grade A, Battery Health 89% • £295; White • 128GB, Unlocked, Grade A, Battery Health 90% • £280."
+    "description": "Apple iPhone 13. 2 units available in stock with Available colour options: Green • 128GB, Unlocked, Battery Health 89% • £295; White • 128GB, Unlocked, Battery Health 90% • £280."
   },
   {
     "name": "iPhone 13 Mini",
@@ -112,13 +107,12 @@ const productsData = [
     "variants": [
       "128GB",
       "Unlocked",
-      "Grade B",
       "White",
       "£290"
     ],
     "models": [],
     "flavors": [],
-    "description": "Apple iPhone 13 Mini — 128GB, Unlocked, Grade B"
+    "description": "Apple iPhone 13 Mini — 128GB, Unlocked"
   },
   {
     "name": "iPhone 12 Pro",
@@ -129,13 +123,12 @@ const productsData = [
     "variants": [
       "64GB",
       "Unlocked",
-      "Grade A",
       "Blue",
       "£250"
     ],
     "models": [],
     "flavors": [],
-    "description": "Apple iPhone 12 Pro — 64GB, Unlocked, Grade A"
+    "description": "Apple iPhone 12 Pro — 64GB, Unlocked"
   },
   {
     "name": "iPhone 12",
@@ -146,13 +139,12 @@ const productsData = [
     "variants": [
       "64GB",
       "Unlocked",
-      "Grade A",
       "Blue",
       "£260"
     ],
     "models": [],
     "flavors": [],
-    "description": "Apple iPhone 12 — 64GB, Unlocked, Grade A"
+    "description": "Apple iPhone 12 — 64GB, Unlocked"
   },
   {
     "name": "iPhone 12 Mini",
@@ -163,13 +155,12 @@ const productsData = [
     "variants": [
       "128GB",
       "Unlocked",
-      "Grade A",
       "Black",
       "£250"
     ],
     "models": [],
     "flavors": [],
-    "description": "Apple iPhone 12 Mini — 128GB, Unlocked, Grade A"
+    "description": "Apple iPhone 12 Mini — 128GB, Unlocked"
   },
   {
     "name": "iPhone 11",
@@ -180,13 +171,12 @@ const productsData = [
     "variants": [
       "128GB",
       "Unlocked",
-      "Grade A",
       "Black",
       "£220"
     ],
     "models": [],
     "flavors": [],
-    "description": "Apple iPhone 11 — 128GB, Unlocked, Grade A"
+    "description": "Apple iPhone 11 — 128GB, Unlocked"
   },
   {
     "name": "iPhone SE 3",
@@ -197,13 +187,12 @@ const productsData = [
     "variants": [
       "64GB",
       "Unlocked",
-      "Grade A",
       "Black",
       "£195"
     ],
     "models": [],
     "flavors": [],
-    "description": "Apple iPhone SE 3 — 64GB, Unlocked, Grade A"
+    "description": "Apple iPhone SE 3 — 64GB, Unlocked"
   },
   {
     "name": "iPhone SE 2",
@@ -214,13 +203,12 @@ const productsData = [
     "variants": [
       "64GB",
       "Unlocked",
-      "Grade A",
       "Black",
       "£145"
     ],
     "models": [],
     "flavors": [],
-    "description": "Apple iPhone SE 2 — 64GB, Unlocked, Grade A"
+    "description": "Apple iPhone SE 2 — 64GB, Unlocked"
   },
   {
     "name": "iPhone XS Max",
@@ -231,13 +219,12 @@ const productsData = [
     "variants": [
       "256GB",
       "Unlocked",
-      "Grade A",
       "White",
       "£220"
     ],
     "models": [],
     "flavors": [],
-    "description": "Apple iPhone XS Max — 256GB, Unlocked, Grade A"
+    "description": "Apple iPhone XS Max — 256GB, Unlocked"
   },
   {
     "name": "iPhone 8 Plus",
@@ -248,13 +235,12 @@ const productsData = [
     "variants": [
       "64GB",
       "Unlocked",
-      "Grade A",
       "Black",
       "£150"
     ],
     "models": [],
     "flavors": [],
-    "description": "Apple iPhone 8 Plus — 64GB, Unlocked, Grade A"
+    "description": "Apple iPhone 8 Plus — 64GB, Unlocked"
   },
   {
     "name": "iPhone 8",
@@ -265,13 +251,12 @@ const productsData = [
     "variants": [
       "64GB",
       "Unlocked",
-      "Grade A",
       "Silver",
       "£130"
     ],
     "models": [],
     "flavors": [],
-    "description": "Apple iPhone 8 — 64GB, Unlocked, Grade A"
+    "description": "Apple iPhone 8 — 64GB, Unlocked"
   },
   {
     "name": "iPhone 7 Plus",
@@ -282,13 +267,12 @@ const productsData = [
     "variants": [
       "128GB",
       "Unlocked",
-      "Grade A",
       "Black",
       "£130"
     ],
     "models": [],
     "flavors": [],
-    "description": "Apple iPhone 7 Plus — 128GB, Unlocked, Grade A"
+    "description": "Apple iPhone 7 Plus — 128GB, Unlocked"
   },
   {
     "name": "Galaxy A56 5G",
@@ -299,13 +283,12 @@ const productsData = [
     "variants": [
       "128GB",
       "Unlocked",
-      "Grade A+",
       "White",
       "£379"
     ],
     "models": [],
     "flavors": [],
-    "description": "Samsung Galaxy A56 5G — 128GB, Unlocked, Grade A+"
+    "description": "Samsung Galaxy A56 5G — 128GB, Unlocked"
   },
   {
     "name": "Galaxy A36 5G",
@@ -317,17 +300,15 @@ const productsData = [
       "2 Units in Stock",
       "128GB",
       "Unlocked",
-      "Grade A",
       "Black",
-      "£299",
-      "Grade A (2nd unit)"
+      "£299"
     ],
     "models": [
-      "Black • 128GB, Unlocked, Grade A • £299",
-      "Black • 128GB, Unlocked, Grade A (2nd unit) • £299"
+      "Black • 128GB, Unlocked • £299",
+      "Black • 128GB, Unlocked • £299"
     ],
     "flavors": [],
-    "description": "Samsung Galaxy A36 5G. 2 units available in stock with multiple color & condition options: Black • 128GB, Unlocked, Grade A • £299; Black • 128GB, Unlocked, Grade A (2nd unit) • £299."
+    "description": "Samsung Galaxy A36 5G. 2 units available in stock with Available colour options: Black • 128GB, Unlocked • £299; Black • 128GB, Unlocked • £299."
   },
   {
     "name": "Galaxy A17 5G",
@@ -338,13 +319,12 @@ const productsData = [
     "variants": [
       "128GB",
       "Unlocked",
-      "Grade A+",
       "Black",
       "£189"
     ],
     "models": [],
     "flavors": [],
-    "description": "Samsung Galaxy A17 5G — 128GB, Unlocked, Grade A+"
+    "description": "Samsung Galaxy A17 5G — 128GB, Unlocked"
   },
   {
     "name": "Galaxy A07",
@@ -355,13 +335,12 @@ const productsData = [
     "variants": [
       "64GB",
       "Unlocked",
-      "Grade A+",
       "Green",
       "£129"
     ],
     "models": [],
     "flavors": [],
-    "description": "Samsung Galaxy A07 — 64GB, Unlocked, Grade A+"
+    "description": "Samsung Galaxy A07 — 64GB, Unlocked"
   },
   {
     "name": "Galaxy S24",
@@ -372,14 +351,13 @@ const productsData = [
     "variants": [
       "128GB",
       "Unlocked",
-      "Grade A",
       "Battery Health 100%",
       "Black",
       "£370"
     ],
     "models": [],
     "flavors": [],
-    "description": "Samsung Galaxy S24 — 128GB, Unlocked, Grade A, Battery Health 100%"
+    "description": "Samsung Galaxy S24 — 128GB, Unlocked, Battery Health 100%"
   },
   {
     "name": "Galaxy A14 5G",
@@ -390,14 +368,13 @@ const productsData = [
     "variants": [
       "128GB",
       "Unlocked",
-      "Grade A",
       "Battery Health 100%",
       "Black",
       "£120"
     ],
     "models": [],
     "flavors": [],
-    "description": "Samsung Galaxy A14 5G — 128GB, Unlocked, Grade A, Battery Health 100%"
+    "description": "Samsung Galaxy A14 5G — 128GB, Unlocked, Battery Health 100%"
   },
   {
     "name": "Galaxy S23 Ultra",
@@ -408,7 +385,8 @@ const productsData = [
     "variants": [],
     "models": [],
     "flavors": [],
-    "description": "Samsung Galaxy S23 Ultra. Call to check current price and availability."
+    "description": "Samsung Galaxy S23 Ultra. Call to check current price and availability.",
+    "availability": "Display model; ask about availability"
   },
   {
     "name": "Galaxy Z Flip 4",
@@ -419,14 +397,13 @@ const productsData = [
     "variants": [
       "128GB",
       "Unlocked",
-      "Grade A",
       "Battery Health 100%",
       "Gold",
       "£290"
     ],
     "models": [],
     "flavors": [],
-    "description": "Samsung Galaxy Z Flip 4 — 128GB, Unlocked, Grade A, Battery Health 100%"
+    "description": "Samsung Galaxy Z Flip 4 — 128GB, Unlocked, Battery Health 100%"
   },
   {
     "name": "Galaxy A32",
@@ -437,14 +414,13 @@ const productsData = [
     "variants": [
       "128GB",
       "Unlocked",
-      "Grade A",
       "Battery Health 100%",
       "Black",
       "£125"
     ],
     "models": [],
     "flavors": [],
-    "description": "Samsung Galaxy A32 — 128GB, Unlocked, Grade A, Battery Health 100%"
+    "description": "Samsung Galaxy A32 — 128GB, Unlocked, Battery Health 100%"
   },
   {
     "name": "Galaxy S21",
@@ -453,16 +429,15 @@ const productsData = [
     "price": "£260",
     "image": "catalogue-images/Samsung Galaxy S21 black.jpg",
     "variants": [
-      "128GB",
       "Unlocked",
-      "Grade A",
       "Battery Health 100%",
       "Black",
       "£260"
     ],
     "models": [],
     "flavors": [],
-    "description": "Samsung Galaxy S21 — 128GB, Unlocked, Grade A, Battery Health 100%"
+    "description": "Samsung Galaxy S21 — storage capacity to confirm in store; Unlocked, Battery Health 100%",
+    "detailNote": "Please call to confirm storage capacity."
   },
   {
     "name": "Galaxy Z Flip",
@@ -473,14 +448,13 @@ const productsData = [
     "variants": [
       "128GB",
       "Unlocked",
-      "Grade A",
       "Battery Health 100%",
       "Black",
       "£199"
     ],
     "models": [],
     "flavors": [],
-    "description": "Samsung Galaxy Z Flip — 128GB, Unlocked, Grade A, Battery Health 100%"
+    "description": "Samsung Galaxy Z Flip — 128GB, Unlocked, Battery Health 100%"
   },
   {
     "name": "Galaxy S7",
@@ -491,14 +465,13 @@ const productsData = [
     "variants": [
       "32GB",
       "Unlocked",
-      "Grade A",
       "Battery Health 100%",
       "Black",
       "£99"
     ],
     "models": [],
     "flavors": [],
-    "description": "Samsung Galaxy S7 — 32GB, Unlocked, Grade A, Battery Health 100%"
+    "description": "Samsung Galaxy S7 — 32GB, Unlocked, Battery Health 100%"
   },
   {
     "name": "Pixel 7A",
@@ -509,14 +482,13 @@ const productsData = [
     "variants": [
       "128GB",
       "Unlocked",
-      "Grade A+",
       "Battery Health 100%",
       "Blue",
       "£230"
     ],
     "models": [],
     "flavors": [],
-    "description": "Google Pixel 7A — 128GB, Unlocked, Grade A+, Battery Health 100%"
+    "description": "Google Pixel 7A — 128GB, Unlocked, Battery Health 100%"
   },
   {
     "name": "Pixel 6A",
@@ -527,14 +499,13 @@ const productsData = [
     "variants": [
       "128GB",
       "Unlocked",
-      "Grade A+",
       "Battery Health 100%",
       "Green",
       "£190"
     ],
     "models": [],
     "flavors": [],
-    "description": "Google Pixel 6A — 128GB, Unlocked, Grade A+, Battery Health 100%"
+    "description": "Google Pixel 6A — 128GB, Unlocked, Battery Health 100%"
   },
   {
     "name": "Vivo X60 5G",
@@ -545,14 +516,13 @@ const productsData = [
     "variants": [
       "128GB",
       "Unlocked",
-      "Grade B",
       "Battery Health 100%",
       "Black",
       "£135"
     ],
     "models": [],
     "flavors": [],
-    "description": "Vivo Vivo X60 5G — 128GB, Unlocked, Grade B, Battery Health 100%"
+    "description": "Vivo Vivo X60 5G — 128GB, Unlocked, Battery Health 100%"
   },
   {
     "name": "Vivo Y72 5G",
@@ -563,14 +533,13 @@ const productsData = [
     "variants": [
       "128GB",
       "Unlocked",
-      "Grade B",
       "Battery Health 88%",
       "Violet",
       "£165"
     ],
     "models": [],
     "flavors": [],
-    "description": "Vivo Vivo Y72 5G — 128GB, Unlocked, Grade B, Battery Health 88%"
+    "description": "Vivo Vivo Y72 5G — 128GB, Unlocked, Battery Health 88%"
   },
   {
     "name": "Nokia C01",
@@ -598,13 +567,12 @@ const productsData = [
     "variants": [
       "3G",
       "Unlocked",
-      "Grade A",
       "Black",
       "£80"
     ],
     "models": [],
     "flavors": [],
-    "description": "Doro Doro 5516 — 3G, Unlocked, Grade A"
+    "description": "Doro Doro 5516 — 3G, Unlocked"
   },
   {
     "name": "iPhone Leather Wallet Flip Book Case",
@@ -2003,7 +1971,7 @@ const productsData = [
   },
   {
     "name": "Elf Bar 600",
-    "category": "Vape Kits",
+    "category": "Prefilled Pod Kits",
     "brand": "Elf Bar",
     "price": "Enquire for price",
     "image": "catalogue-images/Elf Bar 600 disposable vape kit.jpg",
@@ -2023,11 +1991,13 @@ const productsData = [
       "Spearmint",
       "Snoow Tobacco"
     ],
-    "description": "Prefilled Pod Vape Kit, 600 puffs, 20mg. Available in store with full flavour selection."
+    "description": "Prefilled Pod Vape Kit, 600 puffs, 20mg. Flavour examples and current range shown above; call to confirm availability.",
+    "cardTypeLabel": "PREFILLED POD KIT",
+    "flavorNote": "26 flavours listed; examples shown"
   },
   {
     "name": "Lost Mary 600",
-    "category": "Vape Kits",
+    "category": "Prefilled Pod Kits",
     "brand": "Lost Mary",
     "price": "Enquire for price",
     "image": "catalogue-images/Lost Mary BM600 prefilled pod pack transparent png.jpg",
@@ -2046,11 +2016,13 @@ const productsData = [
       "Menthol",
       "Double Apple"
     ],
-    "description": "BM600 Prefilled Pod Vape Kit, 600 puffs, 20mg. Available in store with full flavour selection."
+    "description": "BM600 Prefilled Pod Vape Kit, 600 puffs, 20mg. Flavour examples and current range shown above; call to confirm availability.",
+    "cardTypeLabel": "PREFILLED POD KIT",
+    "flavorNote": "34 flavours listed; examples shown"
   },
   {
     "name": "Lost Mary 6K",
-    "category": "Vape Kits",
+    "category": "Prefilled Pod Kits",
     "brand": "Lost Mary",
     "price": "Enquire for price",
     "image": "catalogue-images/Lost Mary BM6000.jpg",
@@ -2068,11 +2040,13 @@ const productsData = [
       "Watermelon Ice",
       "Grape"
     ],
-    "description": "BM6000 Pod Vape, 6000 puffs, 20mg. Available in store with full flavour selection."
+    "description": "BM6000 Pod Vape, 6000 puffs, 20mg. Flavour examples and current range shown above; call to confirm availability.",
+    "cardTypeLabel": "PREFILLED POD KIT",
+    "flavorNote": "Popular flavours listed; call to confirm the full range"
   },
   {
     "name": "Lost Mary 30K",
-    "category": "Vape Kits",
+    "category": "Prefilled Pod Kits",
     "brand": "Lost Mary",
     "price": "Enquire for price",
     "image": "catalogue-images/Lost Mary 30K (Nera 30K.jpg",
@@ -2090,11 +2064,13 @@ const productsData = [
       "Blue Razz Lemonade",
       "Watermelon Ice"
     ],
-    "description": "Nera 30K Fullview Vape, 30,000 puffs, 20mg. Available in store with full flavour selection."
+    "description": "Nera 30K Fullview Vape, 30,000 puffs, 20mg. Flavour examples and current range shown above; call to confirm availability.",
+    "cardTypeLabel": "PREFILLED POD KIT",
+    "flavorNote": "Popular flavours listed; call to confirm the full range"
   },
   {
-    "name": "SKE Crystal SKE 600",
-    "category": "Vape Kits",
+    "name": "SKE Crystal 600",
+    "category": "Prefilled Pod Kits",
     "brand": "SKE Crystal",
     "price": "Enquire for price",
     "image": "catalogue-images/SKE Crystal SKE 600 updated.jpg",
@@ -2113,11 +2089,13 @@ const productsData = [
       "Menthol",
       "Tobacco"
     ],
-    "description": "Crystal Bar Prefilled Vape Kit, 600 puffs, 20mg. Available in store with full flavour selection."
+    "description": "Crystal Bar Prefilled Vape Kit, 600 puffs, 20mg. Flavour examples and current range shown above; call to confirm availability.",
+    "cardTypeLabel": "PREFILLED POD KIT",
+    "flavorNote": "40 flavours listed; examples shown"
   },
   {
-    "name": "SKE Crystal SKE 6K",
-    "category": "Vape Kits",
+    "name": "SKE Crystal 6K",
+    "category": "Prefilled Pod Kits",
     "brand": "SKE Crystal",
     "price": "Enquire for price",
     "image": "catalogue-images/SKE Crystal CL6000.jpg",
@@ -2128,11 +2106,13 @@ const productsData = [
       "20mg"
     ],
     "flavors": [],
-    "description": "Crystal CL6000, 6000 puffs, 20mg. Available in store with full flavour selection."
+    "description": "Crystal CL6000, 6000 puffs, 20mg. Flavour examples and current range shown above; call to confirm availability.",
+    "cardTypeLabel": "PREFILLED POD KIT",
+    "flavorNote": "Call to confirm the current flavour range"
   },
   {
-    "name": "SKE Crystal SKE 15K",
-    "category": "Vape Kits",
+    "name": "SKE Crystal 15K",
+    "category": "Prefilled Pod Kits",
     "brand": "SKE Crystal",
     "price": "Enquire for price",
     "image": "catalogue-images/SKE 15K (SKE Crystal Bar.jpg",
@@ -2144,11 +2124,13 @@ const productsData = [
       "20mg"
     ],
     "flavors": [],
-    "description": "Bar 15k Prefilled Vape Kit, 15,000 puffs, 20mg. Available in store with full flavour selection."
+    "description": "Bar 15k Prefilled Vape Kit, 15,000 puffs, 20mg. Flavour examples and current range shown above; call to confirm availability.",
+    "cardTypeLabel": "PREFILLED POD KIT",
+    "flavorNote": "Call to confirm the current flavour range"
   },
   {
     "name": "Hayati 6K",
-    "category": "Vape Kits",
+    "category": "Prefilled Pod Kits",
     "brand": "Hayati",
     "price": "Enquire for price",
     "image": "catalogue-images/Hayati Pro Max 4000.jpg",
@@ -2164,11 +2146,13 @@ const productsData = [
       "Blue Razz Lemonade",
       "Fresh Mint"
     ],
-    "description": "Pro Max 6000+ Prefilled Pod Vape Kit, 20mg. Available in store with full flavour selection."
+    "description": "Pro Max 6000+ Prefilled Pod Vape Kit, 20mg. Flavour examples and current range shown above; call to confirm availability.",
+    "cardTypeLabel": "PREFILLED POD KIT",
+    "flavorNote": "30+ flavours; examples shown; call to confirm the full range"
   },
   {
     "name": "Hayati 25K",
-    "category": "Vape Kits",
+    "category": "Prefilled Pod Kits",
     "brand": "Hayati",
     "price": "Enquire for price",
     "image": "catalogue-images/Hayati Pro Ultra Plus 25000 pods pack transparent png.jpg",
@@ -2178,11 +2162,13 @@ const productsData = [
       "20mg"
     ],
     "flavors": [],
-    "description": "Pro Ultra 25k Prefilled Vape Kit, 20mg. Available in store with full flavour selection."
+    "description": "Pro Ultra 25k Prefilled Vape Kit, 20mg. Flavour examples and current range shown above; call to confirm availability.",
+    "cardTypeLabel": "PREFILLED POD KIT",
+    "flavorNote": "Call to confirm the current flavour range"
   },
   {
-    "name": "Al Fakher Alfakher 50K",
-    "category": "Vape Kits",
+    "name": "Al Fakher 50K",
+    "category": "Prefilled Pod Kits",
     "brand": "Al Fakher",
     "price": "Enquire for price",
     "image": "catalogue-images/Al Fakher Crown Bar 50K.jpg",
@@ -2190,11 +2176,13 @@ const productsData = [
       "Al Fakher"
     ],
     "flavors": [],
-    "description": "Al Fakher 50K vape kit. Call to check current price, flavours and stock."
+    "description": "Al Fakher 50K — call to confirm availability, price and flavours.",
+    "availability": "Call to confirm availability",
+    "cardTypeLabel": "PREFILLED POD KIT"
   },
   {
-    "name": "Vaporesso (Dojo) Dojo 10K",
-    "category": "Vape Kits",
+    "name": "Vaporesso Dojo Blast 10K",
+    "category": "Prefilled Pod Kits",
     "brand": "Vaporesso (Dojo)",
     "price": "Enquire for price",
     "image": "catalogue-images/Vaporesso Dojo Blast 10K.jpg",
@@ -2204,21 +2192,25 @@ const productsData = [
       "20mg"
     ],
     "flavors": [],
-    "description": "Vaporesso Dojo Blast 10K prefilled pod vape kit, 20mg. Call to check current flavours, price and stock."
+    "description": "Vaporesso Dojo Blast 10K prefilled pod vape kit, 20mg. Call to check current flavours, price and stock.",
+    "cardTypeLabel": "PREFILLED POD KIT",
+    "flavorNote": "28 flavours listed, including 5 dual-flavour pods; call to confirm the current selection"
   },
   {
     "name": "IVG 10K",
-    "category": "Vape Kits",
+    "category": "Prefilled Pod Kits",
     "brand": "IVG",
     "price": "Enquire for price",
     "image": "catalogue-images/IVG Pro 12 10K pod kit box transparent png.jpg",
     "variants": [],
     "flavors": [],
-    "description": "IVG pod kit. Call to check current product details, price and availability."
+    "description": "IVG 10K — call to confirm exact product details and availability.",
+    "availability": "Call to confirm product and availability",
+    "cardTypeLabel": "PREFILLED POD KIT"
   },
   {
     "name": "Pyne Pod 50K",
-    "category": "Vape Kits",
+    "category": "Prefilled Pod Kits",
     "brand": "Pyne Pod",
     "price": "Enquire for price",
     "image": "catalogue-images/Pyne Pod Click 50K.jpg",
@@ -2228,11 +2220,13 @@ const productsData = [
       "20mg"
     ],
     "flavors": [],
-    "description": "Pyne Click 50k Prefilled Pod Vape Kit, 20mg. Available in store with full flavour selection."
+    "description": "Pyne Click 50k Prefilled Pod Vape Kit, 20mg. Flavour examples and current range shown above; call to confirm availability.",
+    "cardTypeLabel": "PREFILLED POD KIT",
+    "flavorNote": "Flavour selection to confirm in store"
   },
   {
     "name": "Vaporesso GTX Go 80 Vape Kit",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "Vaporesso",
     "price": "£19.99",
     "image": "catalogue-images/Vaporesso GTX Go 80 kit.jpg",
@@ -2241,11 +2235,12 @@ const productsData = [
       "Vaporesso"
     ],
     "flavors": [],
-    "description": "Vaporesso GTX Go 80 Vape Kit rechargeable vape kit."
+    "description": "Vaporesso GTX Go 80 Vape Kit rechargeable vape kit.",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "Vaporesso Luxe S Vape Kit",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "Vaporesso",
     "price": "£36.99",
     "image": "catalogue-images/Vaporesso Luxe S kit.jpg",
@@ -2254,11 +2249,12 @@ const productsData = [
       "Vaporesso"
     ],
     "flavors": [],
-    "description": "Vaporesso Luxe S Vape Kit rechargeable vape kit."
+    "description": "Vaporesso Luxe S Vape Kit rechargeable vape kit.",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "NeXlim 2",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "NeXlim",
     "price": "Enquire for price",
     "image": "catalogue-images/NeXlim 2 kit.jpg",
@@ -2267,11 +2263,12 @@ const productsData = [
       "Double flavour, double lifespan"
     ],
     "flavors": [],
-    "description": "NeXlim NeXlim 2 rechargeable vape kit. Double flavour, double lifespan"
+    "description": "NeXlim NeXlim 2 rechargeable vape kit. Double flavour, double lifespan",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "Geek Vape iFC Kit",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "Geek Vape",
     "price": "£24.99",
     "image": "catalogue-images/Geekvape iFC kit.jpg",
@@ -2280,11 +2277,12 @@ const productsData = [
       "Geek Vape"
     ],
     "flavors": [],
-    "description": "Geek Vape iFC Kit rechargeable vape kit."
+    "description": "Geek Vape iFC Kit rechargeable vape kit.",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "Voopoo Drag X2",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "Voopoo",
     "price": "Enquire for price",
     "image": "catalogue-images/Voopoo Drag X2 kit.jpg",
@@ -2292,11 +2290,12 @@ const productsData = [
       "Voopoo"
     ],
     "flavors": [],
-    "description": "Voopoo Drag X2 rechargeable vape kit."
+    "description": "Voopoo Drag X2 rechargeable vape kit.",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "Vaporesso Target 100",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "Vaporesso",
     "price": "£44.99",
     "image": "catalogue-images/Vaporesso Target 100 kit.jpg",
@@ -2305,11 +2304,12 @@ const productsData = [
       "Vaporesso"
     ],
     "flavors": [],
-    "description": "Vaporesso Target 100 rechargeable vape kit."
+    "description": "Vaporesso Target 100 rechargeable vape kit.",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "Vaporesso Forz TX80",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "Vaporesso",
     "price": "£39.99",
     "image": "catalogue-images/Vaporesso Forz TX80 kit.jpg",
@@ -2318,11 +2318,12 @@ const productsData = [
       "Vaporesso"
     ],
     "flavors": [],
-    "description": "Vaporesso Forz TX80 rechargeable vape kit."
+    "description": "Vaporesso Forz TX80 rechargeable vape kit.",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "Geek Vape Aegis X Vape Kit",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "Geek Vape",
     "price": "Enquire for price",
     "image": "catalogue-images/Geekvape Aegis X kit.jpg",
@@ -2330,11 +2331,12 @@ const productsData = [
       "Geek Vape"
     ],
     "flavors": [],
-    "description": "Geek Vape Aegis X Vape Kit rechargeable vape kit."
+    "description": "Geek Vape Aegis X Vape Kit rechargeable vape kit.",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "Smok Mag Solo Kit",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "Smok",
     "price": "£36.99",
     "image": "catalogue-images/Smok Mag Solo kit.jpg",
@@ -2343,11 +2345,12 @@ const productsData = [
       "Smok"
     ],
     "flavors": [],
-    "description": "Smok Mag Solo Kit rechargeable vape kit."
+    "description": "Smok Mag Solo Kit rechargeable vape kit.",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "Smok X-Priv Kit",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "Smok",
     "price": "£49.99",
     "image": "catalogue-images/Smok X-Priv kit.jpg",
@@ -2356,11 +2359,12 @@ const productsData = [
       "Smok"
     ],
     "flavors": [],
-    "description": "Smok X-Priv Kit rechargeable vape kit."
+    "description": "Smok X-Priv Kit rechargeable vape kit.",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "Geek Vape Obelisk 65 Vape Kit",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "Geek Vape",
     "price": "Enquire for price",
     "image": "catalogue-images/Geekvape Obelisk 65 kit.jpg",
@@ -2368,24 +2372,25 @@ const productsData = [
       "Geek Vape"
     ],
     "flavors": [],
-    "description": "Geek Vape Obelisk 65 Vape Kit rechargeable vape kit."
+    "description": "Geek Vape Obelisk 65 Vape Kit rechargeable vape kit.",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "Smok Mag V8",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "Smok",
-    "price": "£49.99",
+    "price": "Enquire for price",
     "image": "catalogue-images/Smok Mag V8 kit box transparent png.jpg",
     "variants": [
-      "£49.99",
       "Smok"
     ],
     "flavors": [],
-    "description": "Smok Mag V8 rechargeable vape kit."
+    "description": "Smok Mag V8 — call to confirm the current price.",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "Voopoo Drag X Pro",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "Voopoo",
     "price": "£37.99",
     "image": "catalogue-images/Voopoo Drag X Pro kit.jpg",
@@ -2394,11 +2399,12 @@ const productsData = [
       "Voopoo"
     ],
     "flavors": [],
-    "description": "Voopoo Drag X Pro rechargeable vape kit."
+    "description": "Voopoo Drag X Pro rechargeable vape kit.",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "Aspire Zelos 3",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "Aspire",
     "price": "£49.99",
     "image": "catalogue-images/Aspire Zelos 3 kit.jpg",
@@ -2407,11 +2413,12 @@ const productsData = [
       "Aspire"
     ],
     "flavors": [],
-    "description": "Aspire Zelos 3 rechargeable vape kit."
+    "description": "Aspire Zelos 3 rechargeable vape kit.",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "OXVA Xlim Pro",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "OXVA",
     "price": "Enquire for price",
     "image": "catalogue-images/OXVA Xlim Pro kit box transparent png.jpg",
@@ -2420,11 +2427,12 @@ const productsData = [
       "Xtreme Flavor"
     ],
     "flavors": [],
-    "description": "OXVA Xlim Pro rechargeable vape kit. Xtreme Flavor"
+    "description": "OXVA Xlim Pro rechargeable vape kit. Xtreme Flavor",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "OXVA Xlim Pro 2",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "OXVA",
     "price": "Enquire for price",
     "image": "catalogue-images/OXVA Xlim Pro 2 kit.jpg",
@@ -2433,11 +2441,12 @@ const productsData = [
       "Xtreme Xperience"
     ],
     "flavors": [],
-    "description": "OXVA Xlim Pro 2 rechargeable vape kit. Xtreme Xperience"
+    "description": "OXVA Xlim Pro 2 rechargeable vape kit. Xtreme Xperience",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "OXVA Xlim 3",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "OXVA",
     "price": "Enquire for price",
     "image": "catalogue-images/OXVA Xlim 3.jpg",
@@ -2445,11 +2454,12 @@ const productsData = [
       "OXVA"
     ],
     "flavors": [],
-    "description": "OXVA Xlim 3 rechargeable vape kit."
+    "description": "OXVA Xlim 3 rechargeable vape kit.",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "Uwell Caliburn X Pod",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "Uwell",
     "price": "£29.99",
     "image": "catalogue-images/Uwell Caliburn X kit box transparent png.jpg",
@@ -2458,11 +2468,12 @@ const productsData = [
       "Uwell"
     ],
     "flavors": [],
-    "description": "Uwell Caliburn X Pod rechargeable vape kit."
+    "description": "Uwell Caliburn X Pod rechargeable vape kit.",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "Uwell Caliburn (Koko Prime)",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "Uwell",
     "price": "Enquire for price",
     "image": "catalogue-images/Uwell Caliburn Tenet Koko kit box transparent png.jpg",
@@ -2470,11 +2481,12 @@ const productsData = [
       "Uwell"
     ],
     "flavors": [],
-    "description": "Uwell Caliburn (Koko Prime) rechargeable vape kit."
+    "description": "Uwell Caliburn (Koko Prime) rechargeable vape kit.",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "Uwell Caliburn GK2",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "Uwell",
     "price": "£29.99",
     "image": "catalogue-images/Uwell Caliburn GK2 kit.jpg",
@@ -2483,11 +2495,12 @@ const productsData = [
       "Uwell"
     ],
     "flavors": [],
-    "description": "Uwell Caliburn GK2 rechargeable vape kit."
+    "description": "Uwell Caliburn GK2 rechargeable vape kit.",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "Uwell Caliburn AK3",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "Uwell",
     "price": "£24.99",
     "image": "catalogue-images/Uwell Caliburn AK3 kit.jpg",
@@ -2496,11 +2509,12 @@ const productsData = [
       "Uwell"
     ],
     "flavors": [],
-    "description": "Uwell Caliburn AK3 rechargeable vape kit."
+    "description": "Uwell Caliburn AK3 rechargeable vape kit.",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "Smok Nord X Kit",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "Smok",
     "price": "£33.99",
     "image": "catalogue-images/Smok Nord X kit.jpg",
@@ -2509,11 +2523,12 @@ const productsData = [
       "Smok"
     ],
     "flavors": [],
-    "description": "Smok Nord X Kit rechargeable vape kit."
+    "description": "Smok Nord X Kit rechargeable vape kit.",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "Smok Novo 4 Kit",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "Smok",
     "price": "Enquire for price",
     "image": "catalogue-images/Smok Novo 4 kit.jpg",
@@ -2521,11 +2536,12 @@ const productsData = [
       "Smok"
     ],
     "flavors": [],
-    "description": "Smok Novo 4 Kit rechargeable vape kit."
+    "description": "Smok Novo 4 Kit rechargeable vape kit.",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "Vaporesso Xros Nano",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "Vaporesso",
     "price": "Enquire for price",
     "image": "catalogue-images/Vaporesso Xros Nano (Original.jpg",
@@ -2533,11 +2549,12 @@ const productsData = [
       "Vaporesso"
     ],
     "flavors": [],
-    "description": "Vaporesso Xros Nano rechargeable vape kit."
+    "description": "Vaporesso Xros Nano rechargeable vape kit.",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "Aspire BP60 Vape Kit",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "Aspire",
     "price": "£24.99",
     "image": "catalogue-images/Aspire BP60 kit.jpg",
@@ -2546,24 +2563,25 @@ const productsData = [
       "Aspire"
     ],
     "flavors": [],
-    "description": "Aspire BP60 Vape Kit rechargeable vape kit."
+    "description": "Aspire BP60 Vape Kit rechargeable vape kit.",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "Eleaf iJust P48 Vape Kit",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "Eleaf",
-    "price": "£39.99",
+    "price": "Enquire for price",
     "image": "catalogue-images/Eleaf iJust P48 kit.jpg",
     "variants": [
-      "£39.99",
       "Eleaf"
     ],
     "flavors": [],
-    "description": "Eleaf iJust P48 Vape Kit rechargeable vape kit."
+    "description": "Eleaf iJust P48 Vape Kit — call to confirm the current price.",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "Vaporesso Luxe X2",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "Vaporesso",
     "price": "Enquire for price",
     "image": "catalogue-images/Vaporesso Luxe X2 kit.jpg",
@@ -2571,11 +2589,12 @@ const productsData = [
       "Vaporesso"
     ],
     "flavors": [],
-    "description": "Vaporesso Luxe X2 rechargeable vape kit."
+    "description": "Vaporesso Luxe X2 rechargeable vape kit.",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "Vaporesso Luxe X Pro",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "Vaporesso",
     "price": "Enquire for price",
     "image": "catalogue-images/Vaporesso Luxe X Pro kit.jpg",
@@ -2583,11 +2602,12 @@ const productsData = [
       "Vaporesso"
     ],
     "flavors": [],
-    "description": "Vaporesso Luxe X Pro rechargeable vape kit."
+    "description": "Vaporesso Luxe X Pro rechargeable vape kit.",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "Vaporesso Xros Pro 2",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "Vaporesso",
     "price": "Enquire for price",
     "image": "catalogue-images/Vaporesso Xros Pro 2 kit.jpg",
@@ -2595,11 +2615,12 @@ const productsData = [
       "Vaporesso"
     ],
     "flavors": [],
-    "description": "Vaporesso Xros Pro 2 rechargeable vape kit."
+    "description": "Vaporesso Xros Pro 2 rechargeable vape kit.",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "Vaporesso Xros 6 Nano",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "Vaporesso",
     "price": "Enquire for price",
     "image": "catalogue-images/Vaporesso Xros 6 Nano kit.jpg",
@@ -2607,11 +2628,12 @@ const productsData = [
       "Vaporesso"
     ],
     "flavors": [],
-    "description": "Vaporesso Xros 6 Nano rechargeable vape kit."
+    "description": "Vaporesso Xros 6 Nano rechargeable vape kit.",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "Vaporesso Xros Pro",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "Vaporesso",
     "price": "Enquire for price",
     "image": "catalogue-images/Vaporesso Xros Pro kit box transparent png.jpg",
@@ -2619,11 +2641,12 @@ const productsData = [
       "Vaporesso"
     ],
     "flavors": [],
-    "description": "Vaporesso Xros Pro rechargeable vape kit."
+    "description": "Vaporesso Xros Pro rechargeable vape kit.",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "Vaporesso Xros 6",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "Vaporesso",
     "price": "Enquire for price",
     "image": "catalogue-images/Vaporesso Xros 6 kit.jpg",
@@ -2631,11 +2654,12 @@ const productsData = [
       "Vaporesso"
     ],
     "flavors": [],
-    "description": "Vaporesso Xros 6 rechargeable vape kit."
+    "description": "Vaporesso Xros 6 rechargeable vape kit.",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "Vaporesso Xros 5",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "Vaporesso",
     "price": "Enquire for price",
     "image": "catalogue-images/Vaporesso Xros 5 kit.jpg",
@@ -2643,11 +2667,12 @@ const productsData = [
       "Vaporesso"
     ],
     "flavors": [],
-    "description": "Vaporesso Xros 5 rechargeable vape kit."
+    "description": "Vaporesso Xros 5 rechargeable vape kit.",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "Vaporesso Xros 4",
-    "category": "Vape Kits",
+    "category": "Starter Vape Kits & Refillable Devices",
     "brand": "Vaporesso",
     "price": "Enquire for price",
     "image": "catalogue-images/Vaporesso Xros 4 kit box transparent png.jpg",
@@ -2655,7 +2680,8 @@ const productsData = [
       "Vaporesso"
     ],
     "flavors": [],
-    "description": "Vaporesso Xros 4 rechargeable vape kit."
+    "description": "Vaporesso Xros 4 rechargeable vape kit.",
+    "cardTypeLabel": "STARTER KIT"
   },
   {
     "name": "IVG Pro Nic Salts",
@@ -2935,7 +2961,7 @@ const productsData = [
     "image": "catalogue-images/Velo reuse.jpg",
     "variants": [
       "Velo",
-      "Tobacco-free nicotine pouches, various strengths (1–6 dots)"
+      "Nicotine pouches, various strengths (1–6 dots)"
     ],
     "flavors": [
       "Bright Spearmint",
@@ -2955,7 +2981,7 @@ const productsData = [
       "Cherry Ice",
       "Freezing Storm +more"
     ],
-    "description": "Velo Tobacco-free nicotine pouches, various strengths (1–6 dots). Premium tobacco-free nicotine pouches."
+    "description": "Nicotine pouches. Various strengths (1–6 dots)."
   },
   {
     "name": "Pablo Nicotine Pouches",
@@ -2973,7 +2999,7 @@ const productsData = [
       "Dark Fist",
       "Purple Grape +more"
     ],
-    "description": "Pablo Strong/extra-strong nicotine pouches (Exclusive & Gold Edition ranges). Premium tobacco-free nicotine pouches."
+    "description": "Strong or extra-strong nicotine pouches (Exclusive and Gold Edition ranges)."
   },
   {
     "name": "Killa Nicotine Pouches",
@@ -2991,7 +3017,7 @@ const productsData = [
       "Apple",
       "Blueberry"
     ],
-    "description": "Killa Strong/extra-strong nicotine pouches. Premium tobacco-free nicotine pouches."
+    "description": "Strong or extra-strong nicotine pouches."
   },
   {
     "name": "Nordic Spirit Nicotine Pouches",
@@ -3001,7 +3027,7 @@ const productsData = [
     "image": "catalogue-images/Nordic Reuse.webp",
     "variants": [
       "Nordic Spirit",
-      "Tobacco-free nicotine pouches"
+      "Nicotine pouches"
     ],
     "flavors": [
       "Frosty Berry",
@@ -3011,7 +3037,7 @@ const productsData = [
       "Blueberry",
       "Dark Fist"
     ],
-    "description": "Nordic Spirit Tobacco-free nicotine pouches. Premium tobacco-free nicotine pouches."
+    "description": "Nicotine pouches."
   },
   {
     "name": "Zyn Nicotine Pouches",
@@ -3021,13 +3047,13 @@ const productsData = [
     "image": "catalogue-images/ZYN nicotine pouches.jpg",
     "variants": [
       "Zyn",
-      "Tobacco-free nicotine pouches"
+      "Nicotine pouches"
     ],
     "flavors": [
       "Spearmint",
       "Coffee"
     ],
-    "description": "Zyn Tobacco-free nicotine pouches. Premium tobacco-free nicotine pouches."
+    "description": "Nicotine pouches."
   },
   {
     "name": "Cuba Nicotine Pouches",
@@ -3040,7 +3066,7 @@ const productsData = [
       "Extra-strong nicotine pouches"
     ],
     "flavors": [],
-    "description": "Cuba Extra-strong nicotine pouches. Premium tobacco-free nicotine pouches."
+    "description": "Extra-strong nicotine pouches."
   },
   {
     "name": "XQS Nicotine Pouches",
@@ -3055,7 +3081,7 @@ const productsData = [
     "flavors": [
       "Tropical"
     ],
-    "description": "XQS Nicotine pouches. Premium tobacco-free nicotine pouches."
+    "description": "Nicotine pouches."
   },
   {
     "name": "Mynt Nicotine Pouches",
@@ -3070,7 +3096,6 @@ const productsData = [
     "flavors": [
       "Mango"
     ],
-    "description": "Mynt Nicotine pouches. Premium tobacco-free nicotine pouches."
+    "description": "Nicotine pouches."
   }
 ];
-

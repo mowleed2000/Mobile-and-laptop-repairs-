@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product & Tech Catalogue | Mobile and Laptop Repairs</title>
     <meta name="description" content="Browse live in-store stock — smartphones, tablets, laptops, vapes, nicotine pouches, and accessories. Call for price & availability.">
-    <link rel="preload" href="style.css?v=20261101-cards1" as="style">
-    <link rel="stylesheet" href="style.css?v=20261101-cards1">
+    <link rel="preload" href="style.css?v=20261101-ready1" as="style">
+    <link rel="stylesheet" href="style.css?v=20261101-ready1">
 </head>
 <body>
 
@@ -105,12 +105,6 @@
         <span class="catalogue-badge">IN-STORE INVENTORY</span>
         <h2>Product & Tech Catalogue</h2>
         <p>Browse live in-store stock — smartphones, tablets, laptops, vapes, nicotine pouches, and accessories. Call for price & availability.</p>
-        <div class="catalogue-grade-guide" role="note" aria-label="Phone condition guide">
-            <strong>Phone condition guide</strong>
-            <span><b>Grade A / A+:</b> typically better cosmetic condition.</span>
-            <span><b>Grade B:</b> may have more visible signs of use.</span>
-            <small>Grades describe appearance; battery health is listed separately when checked. Each handset varies — ask to inspect the phone in store.</small>
-        </div>
     </section>
 
     <!-- Main Section with Left Sidebar & Products Grid -->
@@ -137,9 +131,13 @@
                         <span><i class="fa-solid fa-headphones"></i> Tech Accessories</span>
                         <span class="item-count-pill">73</span>
                     </li>
-                    <li class="sidebar-nav-item " onclick="selectCategory('Vape Kits', this)">
-                        <span><i class="fa-solid fa-wind"></i> Vape Kits</span>
-                        <span class="item-count-pill">47</span>
+                    <li class="sidebar-nav-item " onclick="selectCategory('Prefilled Pod Kits', this)">
+                        <span><i class="fa-solid fa-wind"></i> Prefilled Pod Kits</span>
+                        <span class="item-count-pill">13</span>
+                    </li>
+                    <li class="sidebar-nav-item " onclick="selectCategory('Starter Vape Kits & Refillable Devices', this)">
+                        <span><i class="fa-solid fa-sliders"></i> Starter Kits &amp; Refillable Devices</span>
+                        <span class="item-count-pill">34</span>
                     </li>
                     <li class="sidebar-nav-item " onclick="selectCategory('E-Liquids', this)">
                         <span><i class="fa-solid fa-droplet"></i> E-Liquids</span>
@@ -186,8 +184,8 @@
             <h3 id="modalTitle" style="color: #fff; margin: 0 0 12px 0; font-size: 1.25rem;"></h3>
             <h4 id="modalHeading" style="color: #cbd5e1; margin: 0 0 10px 0; font-size: 0.9rem;">Available In-Store Flavors:</h4>
             <div id="modalChips" style="margin-bottom: 20px;"></div>
-            <div style="background: rgba(225,29,42,0.15); color: #f87171; padding: 12px; border-radius: 10px; text-align: center; font-weight: 700; font-size: 0.88rem;">
-                <i class="fa-solid fa-store"></i> In Stock Now at 175b North End Rd
+            <div class="catalogue-modal-stock-note" style="background: rgba(225,29,42,0.15); color: #f87171; padding: 12px; border-radius: 10px; text-align: center; font-weight: 700; font-size: 0.88rem;">
+                <i class="fa-solid fa-store"></i> Call the shop to confirm stock and price
             </div>
         </div>
     </div>
@@ -256,7 +254,7 @@
     </a>
     <script src="nav.js" defer></script>
     <script src="map.js" defer></script>
-    <script src="catalogue-data.js?v=20261101-cards1" defer></script>
-    <script src="catalogue.js?v=20261101-cards1" defer></script>
+    <script src="catalogue-data.js?v=20261101-ready1" defer></script>
+    <script src="catalogue.js?v=20261101-ready1" defer></script>
 </body>
 </html>
