@@ -42,7 +42,7 @@
                     if (!feedback) return;
                     if (data.success) {
                         feedback.style.color = '#f87171';
-                        feedback.textContent = 'Enquiry sent. We will contact you on that number.';
+                        feedback.setAttribute('role','status'); feedback.setAttribute('aria-live','polite'); feedback.textContent = 'Thank you for submitting your request. We will contact you on that number.';
                         form.reset();
                     } else {
                         feedback.style.color = '#ef4444';
@@ -66,3 +66,4 @@
         if (typeof original === 'function') original(event);
     };
 })();
+

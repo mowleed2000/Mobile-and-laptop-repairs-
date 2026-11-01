@@ -46,7 +46,7 @@
                 if (!feedback) return;
                 if (data.success) {
                     feedback.style.color = '#f87171';
-                    feedback.textContent = 'Enquiry sent! We will contact you shortly.';
+                    feedback.setAttribute('role','status'); feedback.setAttribute('aria-live','polite'); feedback.textContent = 'Thank you for submitting your request. We will be in touch shortly.';
                     form.reset();
                 } else {
                     feedback.style.color = '#ef4444';
@@ -69,3 +69,4 @@
 
     window.handleEnquiry = handleEnquiry;
 })();
+

@@ -5,7 +5,7 @@ const productsData = [
     "name": "iPhone 16 Pro",
     "category": "Smartphones",
     "brand": "Apple",
-    "price": "£835 (was £900)",
+    "price": "£835",
     "image": "catalogue-images/Apple iPhone 16 Pro black titanium back transparent png.jpg",
     "variants": [
       "512GB",
@@ -13,7 +13,7 @@ const productsData = [
       "Grade A",
       "Battery Health 88%",
       "Titanium",
-      "£835 (was £900)"
+      "£835"
     ],
     "models": [],
     "flavors": [],
@@ -23,7 +23,7 @@ const productsData = [
     "name": "iPhone 14 Pro",
     "category": "Smartphones",
     "brand": "Apple",
-    "price": "£390 (was £450)",
+    "price": "£390",
     "image": "catalogue-images/Iphone 14 pro.jpg",
     "variants": [
       "128GB",
@@ -31,7 +31,7 @@ const productsData = [
       "Grade B",
       "Battery Health 85%",
       "Purple",
-      "£390 (was £450)"
+      "£390"
     ],
     "models": [],
     "flavors": [],
@@ -41,7 +41,7 @@ const productsData = [
     "name": "iPhone 14",
     "category": "Smartphones",
     "brand": "Apple",
-    "price": "£450 (was £480)",
+    "price": "£450",
     "image": "catalogue-images/iPhone 14 box transparent png.jpg",
     "variants": [
       "128GB",
@@ -49,7 +49,7 @@ const productsData = [
       "Grade A",
       "Battery Health 90%",
       "Red",
-      "£450 (was £480)"
+      "£450"
     ],
     "models": [],
     "flavors": [],
@@ -67,16 +67,16 @@ const productsData = [
       "Unlocked",
       "Grade B",
       "Blue",
-      "£410 (was £440)",
+      "£410",
       "Gold",
-      "£320 (was £390)"
+      "£320"
     ],
     "models": [
-      "Blue • 128GB, Unlocked, Grade B • £410 (was £440)",
-      "Gold • 128GB, Unlocked, Grade B • £320 (was £390)"
+      "Blue • 128GB, Unlocked, Grade B • £410",
+      "Gold • 128GB, Unlocked, Grade B • £320"
     ],
     "flavors": [],
-    "description": "Apple iPhone 13 Pro Max. 2 units available in stock with multiple color & condition options: Blue • 128GB, Unlocked, Grade B • £410 (was £440); Gold • 128GB, Unlocked, Grade B • £320 (was £390)."
+    "description": "Apple iPhone 13 Pro Max. 2 units available in stock with multiple color & condition options: Blue • 128GB, Unlocked, Grade B • £410; Gold • 128GB, Unlocked, Grade B • £320."
   },
   {
     "name": "iPhone 13",
@@ -91,30 +91,30 @@ const productsData = [
       "Grade A",
       "Battery Health 89%",
       "Green",
-      "£295 (was £355)",
+      "£295",
       "Battery Health 90%",
       "White",
-      "£280 (was £345)"
+      "£280"
     ],
     "models": [
-      "Green • 128GB, Unlocked, Grade A, Battery Health 89% • £295 (was £355)",
-      "White • 128GB, Unlocked, Grade A, Battery Health 90% • £280 (was £345)"
+      "Green • 128GB, Unlocked, Grade A, Battery Health 89% • £295",
+      "White • 128GB, Unlocked, Grade A, Battery Health 90% • £280"
     ],
     "flavors": [],
-    "description": "Apple iPhone 13. 2 units available in stock with multiple color & condition options: Green • 128GB, Unlocked, Grade A, Battery Health 89% • £295 (was £355); White • 128GB, Unlocked, Grade A, Battery Health 90% • £280 (was £345)."
+    "description": "Apple iPhone 13. 2 units available in stock with multiple color & condition options: Green • 128GB, Unlocked, Grade A, Battery Health 89% • £295; White • 128GB, Unlocked, Grade A, Battery Health 90% • £280."
   },
   {
     "name": "iPhone 13 Mini",
     "category": "Smartphones",
     "brand": "Apple",
-    "price": "£290 (was £350)",
+    "price": "£290",
     "image": "catalogue-images/Apple iPhone 13 mini blue back transparent png.jpg",
     "variants": [
       "128GB",
       "Unlocked",
       "Grade B",
       "White",
-      "£290 (was £350)"
+      "£290"
     ],
     "models": [],
     "flavors": [],
@@ -124,14 +124,14 @@ const productsData = [
     "name": "iPhone 12 Pro",
     "category": "Smartphones",
     "brand": "Apple",
-    "price": "£250 (was £300)",
+    "price": "£250",
     "image": "catalogue-images/iPhone 12 Pro.jpg",
     "variants": [
       "64GB",
       "Unlocked",
       "Grade A",
       "Blue",
-      "£250 (was £300)"
+      "£250"
     ],
     "models": [],
     "flavors": [],
@@ -141,14 +141,14 @@ const productsData = [
     "name": "iPhone 12",
     "category": "Smartphones",
     "brand": "Apple",
-    "price": "£260 (was £290)",
+    "price": "£260",
     "image": "catalogue-images/Apple iPhone 12 green back transparent png.jpg",
     "variants": [
       "64GB",
       "Unlocked",
       "Grade A",
       "Blue",
-      "£260 (was £290)"
+      "£260"
     ],
     "models": [],
     "flavors": [],
@@ -158,14 +158,14 @@ const productsData = [
     "name": "iPhone 12 Mini",
     "category": "Smartphones",
     "brand": "Apple",
-    "price": "£250 (was £300)",
+    "price": "£250",
     "image": "catalogue-images/Apple iPhone 12 mini blue back transparent png.jpg",
     "variants": [
       "128GB",
       "Unlocked",
       "Grade A",
       "Black",
-      "£250 (was £300)"
+      "£250"
     ],
     "models": [],
     "flavors": [],
@@ -175,14 +175,14 @@ const productsData = [
     "name": "iPhone 11",
     "category": "Smartphones",
     "brand": "Apple",
-    "price": "£220 (was £250)",
+    "price": "£220",
     "image": "catalogue-images/Apple iPhone 11 black back transparent png.jpg",
     "variants": [
       "128GB",
       "Unlocked",
       "Grade A",
       "Black",
-      "£220 (was £250)"
+      "£220"
     ],
     "models": [],
     "flavors": [],
@@ -192,14 +192,14 @@ const productsData = [
     "name": "iPhone SE 3",
     "category": "Smartphones",
     "brand": "Apple",
-    "price": "£195 (was £210)",
+    "price": "£195",
     "image": "catalogue-images/iPhone SE 3rd generation black.webp",
     "variants": [
       "64GB",
       "Unlocked",
       "Grade A",
       "Black",
-      "£195 (was £210)"
+      "£195"
     ],
     "models": [],
     "flavors": [],
@@ -209,14 +209,14 @@ const productsData = [
     "name": "iPhone SE 2",
     "category": "Smartphones",
     "brand": "Apple",
-    "price": "£145 (was £170)",
+    "price": "£145",
     "image": "catalogue-images/Apple iPhone SE 2020 black back transparent png.jpg",
     "variants": [
       "64GB",
       "Unlocked",
       "Grade A",
       "Black",
-      "£145 (was £170)"
+      "£145"
     ],
     "models": [],
     "flavors": [],
@@ -226,14 +226,14 @@ const productsData = [
     "name": "iPhone XS Max",
     "category": "Smartphones",
     "brand": "Apple",
-    "price": "£220 (was £290)",
+    "price": "£220",
     "image": "catalogue-images/Apple iPhone XS Max gold back transparent png.jpg",
     "variants": [
       "256GB",
       "Unlocked",
       "Grade A",
       "White",
-      "£220 (was £290)"
+      "£220"
     ],
     "models": [],
     "flavors": [],
@@ -243,14 +243,14 @@ const productsData = [
     "name": "iPhone 8 Plus",
     "category": "Smartphones",
     "brand": "Apple",
-    "price": "£150 (was £190)",
+    "price": "£150",
     "image": "catalogue-images/Apple iPhone 8 Plus space grey back transparent png.jpg",
     "variants": [
       "64GB",
       "Unlocked",
       "Grade A",
       "Black",
-      "£150 (was £190)"
+      "£150"
     ],
     "models": [],
     "flavors": [],
@@ -260,14 +260,14 @@ const productsData = [
     "name": "iPhone 8",
     "category": "Smartphones",
     "brand": "Apple",
-    "price": "£130 (was £165)",
+    "price": "£130",
     "image": "catalogue-images/Apple iPhone 8 product red back transparent png.jpg",
     "variants": [
       "64GB",
       "Unlocked",
       "Grade A",
       "Silver",
-      "£130 (was £165)"
+      "£130"
     ],
     "models": [],
     "flavors": [],
@@ -277,14 +277,14 @@ const productsData = [
     "name": "iPhone 7 Plus",
     "category": "Smartphones",
     "brand": "Apple",
-    "price": "£130 (was £170)",
+    "price": "£130",
     "image": "catalogue-images/iPhone 7 Plus black.png",
     "variants": [
       "128GB",
       "Unlocked",
       "Grade A",
       "Black",
-      "£130 (was £170)"
+      "£130"
     ],
     "models": [],
     "flavors": [],
@@ -294,14 +294,14 @@ const productsData = [
     "name": "Galaxy A56 5G",
     "category": "Smartphones",
     "brand": "Samsung",
-    "price": "£379 (was £429)",
+    "price": "£379",
     "image": "catalogue-images/Samsung Galaxy A56 5G retail box transparent png.jpg",
     "variants": [
       "128GB",
       "Unlocked",
       "Grade A+",
       "White",
-      "£379 (was £429)"
+      "£379"
     ],
     "models": [],
     "flavors": [],
@@ -311,7 +311,7 @@ const productsData = [
     "name": "Galaxy A36 5G",
     "category": "Smartphones",
     "brand": "Samsung",
-    "price": "£299 (was £359)",
+    "price": "£299",
     "image": "catalogue-images/Samsung Galaxy A36 5G retail box transparent png.jpg",
     "variants": [
       "2 Units in Stock",
@@ -319,28 +319,28 @@ const productsData = [
       "Unlocked",
       "Grade A",
       "Black",
-      "£299 (was £359)",
+      "£299",
       "Grade A (2nd unit)"
     ],
     "models": [
-      "Black • 128GB, Unlocked, Grade A • £299 (was £359)",
-      "Black • 128GB, Unlocked, Grade A (2nd unit) • £299 (was £359)"
+      "Black • 128GB, Unlocked, Grade A • £299",
+      "Black • 128GB, Unlocked, Grade A (2nd unit) • £299"
     ],
     "flavors": [],
-    "description": "Samsung Galaxy A36 5G. 2 units available in stock with multiple color & condition options: Black • 128GB, Unlocked, Grade A • £299 (was £359); Black • 128GB, Unlocked, Grade A (2nd unit) • £299 (was £359)."
+    "description": "Samsung Galaxy A36 5G. 2 units available in stock with multiple color & condition options: Black • 128GB, Unlocked, Grade A • £299; Black • 128GB, Unlocked, Grade A (2nd unit) • £299."
   },
   {
     "name": "Galaxy A17 5G",
     "category": "Smartphones",
     "brand": "Samsung",
-    "price": "£189 (was £219)",
+    "price": "£189",
     "image": "catalogue-images/Samsung Galaxy A17 5G retail box transparent png.jpg",
     "variants": [
       "128GB",
       "Unlocked",
       "Grade A+",
       "Black",
-      "£189 (was £219)"
+      "£189"
     ],
     "models": [],
     "flavors": [],
@@ -350,14 +350,14 @@ const productsData = [
     "name": "Galaxy A07",
     "category": "Smartphones",
     "brand": "Samsung",
-    "price": "£129 (was £149)",
+    "price": "£129",
     "image": "catalogue-images/Samsung Galaxy A07 retail box transparent png.jpg",
     "variants": [
       "64GB",
       "Unlocked",
       "Grade A+",
       "Green",
-      "£129 (was £149)"
+      "£129"
     ],
     "models": [],
     "flavors": [],
@@ -367,7 +367,7 @@ const productsData = [
     "name": "Galaxy S24",
     "category": "Smartphones",
     "brand": "Samsung",
-    "price": "£370 (was £425)",
+    "price": "£370",
     "image": "catalogue-images/Samsung Galaxy S24 black.jpg",
     "variants": [
       "128GB",
@@ -375,7 +375,7 @@ const productsData = [
       "Grade A",
       "Battery Health 100%",
       "Black",
-      "£370 (was £425)"
+      "£370"
     ],
     "models": [],
     "flavors": [],
@@ -385,7 +385,7 @@ const productsData = [
     "name": "Galaxy A14 5G",
     "category": "Smartphones",
     "brand": "Samsung",
-    "price": "£120 (was £170)",
+    "price": "£120",
     "image": "catalogue-images/Samsung Galaxy A14 retail box transparent png.jpg",
     "variants": [
       "128GB",
@@ -393,7 +393,7 @@ const productsData = [
       "Grade A",
       "Battery Health 100%",
       "Black",
-      "£120 (was £170)"
+      "£120"
     ],
     "models": [],
     "flavors": [],
@@ -414,7 +414,7 @@ const productsData = [
     "name": "Galaxy Z Flip 4",
     "category": "Smartphones",
     "brand": "Samsung",
-    "price": "£290 (was £330)",
+    "price": "£290",
     "image": "catalogue-images/Samsung Galaxy Z Flip 4 gold.jpg",
     "variants": [
       "128GB",
@@ -422,7 +422,7 @@ const productsData = [
       "Grade A",
       "Battery Health 100%",
       "Gold",
-      "£290 (was £330)"
+      "£290"
     ],
     "models": [],
     "flavors": [],
@@ -432,7 +432,7 @@ const productsData = [
     "name": "Galaxy A32",
     "category": "Smartphones",
     "brand": "Samsung",
-    "price": "£125 (was £180)",
+    "price": "£125",
     "image": "catalogue-images/Samsung Galaxy A32 black.webp",
     "variants": [
       "128GB",
@@ -440,7 +440,7 @@ const productsData = [
       "Grade A",
       "Battery Health 100%",
       "Black",
-      "£125 (was £180)"
+      "£125"
     ],
     "models": [],
     "flavors": [],
@@ -450,7 +450,7 @@ const productsData = [
     "name": "Galaxy S21",
     "category": "Smartphones",
     "brand": "Samsung",
-    "price": "£260 (was £290)",
+    "price": "£260",
     "image": "catalogue-images/Samsung Galaxy S21 black.jpg",
     "variants": [
       "128GB",
@@ -458,7 +458,7 @@ const productsData = [
       "Grade A",
       "Battery Health 100%",
       "Black",
-      "£260 (was £290)"
+      "£260"
     ],
     "models": [],
     "flavors": [],
@@ -468,7 +468,7 @@ const productsData = [
     "name": "Galaxy Z Flip",
     "category": "Smartphones",
     "brand": "Samsung",
-    "price": "£199 (was £249)",
+    "price": "£199",
     "image": "catalogue-images/Samsung Galaxy Z Flip black.webp",
     "variants": [
       "128GB",
@@ -476,7 +476,7 @@ const productsData = [
       "Grade A",
       "Battery Health 100%",
       "Black",
-      "£199 (was £249)"
+      "£199"
     ],
     "models": [],
     "flavors": [],
@@ -486,7 +486,7 @@ const productsData = [
     "name": "Galaxy S7",
     "category": "Smartphones",
     "brand": "Samsung",
-    "price": "£99 (was £110)",
+    "price": "£99",
     "image": "catalogue-images/Samsung Galaxy S7 black.jpg",
     "variants": [
       "32GB",
@@ -494,7 +494,7 @@ const productsData = [
       "Grade A",
       "Battery Health 100%",
       "Black",
-      "£99 (was £110)"
+      "£99"
     ],
     "models": [],
     "flavors": [],
@@ -504,7 +504,7 @@ const productsData = [
     "name": "Pixel 7A",
     "category": "Smartphones",
     "brand": "Google",
-    "price": "£230 (was £270)",
+    "price": "£230",
     "image": "catalogue-images/Google Pixel 7a sea.jpg",
     "variants": [
       "128GB",
@@ -512,7 +512,7 @@ const productsData = [
       "Grade A+",
       "Battery Health 100%",
       "Blue",
-      "£230 (was £270)"
+      "£230"
     ],
     "models": [],
     "flavors": [],
@@ -522,7 +522,7 @@ const productsData = [
     "name": "Pixel 6A",
     "category": "Smartphones",
     "brand": "Google",
-    "price": "£190 (was £210)",
+    "price": "£190",
     "image": "catalogue-images/Google Pixel 6a sage.webp",
     "variants": [
       "128GB",
@@ -530,7 +530,7 @@ const productsData = [
       "Grade A+",
       "Battery Health 100%",
       "Green",
-      "£190 (was £210)"
+      "£190"
     ],
     "models": [],
     "flavors": [],
@@ -540,7 +540,7 @@ const productsData = [
     "name": "Vivo X60 5G",
     "category": "Smartphones",
     "brand": "Vivo",
-    "price": "£135 (was £175)",
+    "price": "£135",
     "image": "catalogue-images/Vivo X60 5G black.jpg",
     "variants": [
       "128GB",
@@ -548,7 +548,7 @@ const productsData = [
       "Grade B",
       "Battery Health 100%",
       "Black",
-      "£135 (was £175)"
+      "£135"
     ],
     "models": [],
     "flavors": [],
@@ -558,7 +558,7 @@ const productsData = [
     "name": "Vivo Y72 5G",
     "category": "Smartphones",
     "brand": "Vivo",
-    "price": "£165 (was £195)",
+    "price": "£165",
     "image": "catalogue-images/Vivo Y72 5G violet.jpg",
     "variants": [
       "128GB",
@@ -566,7 +566,7 @@ const productsData = [
       "Grade B",
       "Battery Health 88%",
       "Violet",
-      "£165 (was £195)"
+      "£165"
     ],
     "models": [],
     "flavors": [],
@@ -576,14 +576,14 @@ const productsData = [
     "name": "Nokia C01",
     "category": "Smartphones",
     "brand": "Nokia",
-    "price": "£80 (was £130)",
+    "price": "£80",
     "image": "catalogue-images/Nokia C01 black.jpg",
     "variants": [
       "32GB",
       "Unlocked",
       "Battery Health 100%",
       "Black",
-      "£80 (was £130)"
+      "£80"
     ],
     "models": [],
     "flavors": [],
@@ -593,14 +593,14 @@ const productsData = [
     "name": "Doro 5516",
     "category": "Smartphones",
     "brand": "Doro",
-    "price": "£80 (was £99)",
+    "price": "£80",
     "image": "catalogue-images/Doro 5516.webp",
     "variants": [
       "3G",
       "Unlocked",
       "Grade A",
       "Black",
-      "£80 (was £99)"
+      "£80"
     ],
     "models": [],
     "flavors": [],
@@ -2234,10 +2234,10 @@ const productsData = [
     "name": "Vaporesso GTX Go 80 Vape Kit",
     "category": "Vape Kits",
     "brand": "Vaporesso",
-    "price": "£19.99 (was £29.99)",
+    "price": "£19.99",
     "image": "catalogue-images/Vaporesso GTX Go 80 kit.jpg",
     "variants": [
-      "£19.99 (was £29.99)",
+      "£19.99",
       "Vaporesso"
     ],
     "flavors": [],
@@ -2247,10 +2247,10 @@ const productsData = [
     "name": "Vaporesso Luxe S Vape Kit",
     "category": "Vape Kits",
     "brand": "Vaporesso",
-    "price": "£36.99 (was £49.99)",
+    "price": "£36.99",
     "image": "catalogue-images/Vaporesso Luxe S kit.jpg",
     "variants": [
-      "£36.99 (was £49.99)",
+      "£36.99",
       "Vaporesso"
     ],
     "flavors": [],
@@ -2273,10 +2273,10 @@ const productsData = [
     "name": "Geek Vape iFC Kit",
     "category": "Vape Kits",
     "brand": "Geek Vape",
-    "price": "£24.99 (was £34.99)",
+    "price": "£24.99",
     "image": "catalogue-images/Geekvape iFC kit.jpg",
     "variants": [
-      "£24.99 (was £34.99)",
+      "£24.99",
       "Geek Vape"
     ],
     "flavors": [],
@@ -2298,10 +2298,10 @@ const productsData = [
     "name": "Vaporesso Target 100",
     "category": "Vape Kits",
     "brand": "Vaporesso",
-    "price": "£44.99 (was £59.99)",
+    "price": "£44.99",
     "image": "catalogue-images/Vaporesso Target 100 kit.jpg",
     "variants": [
-      "£44.99 (was £59.99)",
+      "£44.99",
       "Vaporesso"
     ],
     "flavors": [],
@@ -2311,10 +2311,10 @@ const productsData = [
     "name": "Vaporesso Forz TX80",
     "category": "Vape Kits",
     "brand": "Vaporesso",
-    "price": "£39.99 (was £49.99)",
+    "price": "£39.99",
     "image": "catalogue-images/Vaporesso Forz TX80 kit.jpg",
     "variants": [
-      "£39.99 (was £49.99)",
+      "£39.99",
       "Vaporesso"
     ],
     "flavors": [],
@@ -3073,3 +3073,4 @@ const productsData = [
     "description": "Mynt Nicotine pouches. Premium tobacco-free nicotine pouches."
   }
 ];
+
