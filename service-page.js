@@ -34,6 +34,7 @@
         html += '<input type="hidden" id="serviceType" value="' + esc(data.formTitle) + '">';
         html += '<div class="form-group"><label for="name">Your name</label><input type="text" id="name" required placeholder="Your name"></div>';
         html += '<div class="form-group"><label for="phone">Phone / WhatsApp</label><input type="tel" id="phone" required placeholder="07…"></div>';
+        html += '<div class="form-group"><label for="email">Email address</label><input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com"></div>';
         html += '<div class="form-group"><label for="device">Device model</label><input type="text" id="device" required placeholder="e.g. iPhone 14 Pro / ThinkPad"></div>';
         html += '<div class="form-group"><label for="issue">What is wrong?</label><textarea id="issue" rows="3" required placeholder="Short description of the fault"></textarea></div>';
         html += '<button type="submit" class="btn btn-primary btn-block"><i class="fa-solid fa-paper-plane"></i> Send enquiry</button>';

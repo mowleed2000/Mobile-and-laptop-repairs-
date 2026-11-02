@@ -151,12 +151,21 @@
                         <span><i class="fa-solid fa-gamepad"></i> Gaming</span>
                         <span class="item-count-pill">4</span>
                     </li>
+                                        <li class="sidebar-nav-item" onclick="selectCategory('Replacement Pods', this)"><span><i class="fa-solid fa-box-open"></i> Pods</span><span class="item-count-pill">0</span></li>
+                    <li class="sidebar-nav-item" onclick="selectCategory('Tablets', this)"><span><i class="fa-solid fa-tablet-screen-button"></i> Tablets</span><span class="item-count-pill">0</span></li>
+                    <li class="sidebar-nav-item" onclick="selectCategory('Laptops', this)"><span><i class="fa-solid fa-laptop"></i> Laptops</span><span class="item-count-pill">0</span></li>
                     </ul>
             </aside>
 
             <!-- Right Main Content -->
             <main class="catalogue-main">
-                <input type="text" id="catalogueSearch" class="search-bar-input" placeholder="🔍 Search products by name, brand, specifications, or flavours..." onkeyup="filterProducts()">
+                <div class="catalogue-filter-row" style="display:flex;gap:10px;flex-wrap:wrap;margin:0 0 16px;">
+<label>Company <select id="catalogueBrandFilter" onchange="filterProducts()"><option value="">All companies</option></select></label>
+<label>Strength <select id="catalogueStrengthFilter" onchange="filterProducts()"><option value="">All strengths</option></select></label>
+<label>Bottle size <select id="catalogueSizeFilter" onchange="filterProducts()"><option value="">All sizes</option><option>10ml</option><option>50ml</option><option>100ml</option></select></label>
+<label>Accessory type <select id="catalogueAccessoryFilter" onchange="filterProducts()"><option value="">All types</option><option>Chargers</option><option>Power banks</option><option>Headphones</option><option>Wireless headphones / earphones</option><option>OTG/adapters</option><option>SD cards/USB</option><option>Other</option></select></label>
+<label>Phone brand <select id="cataloguePhoneFilter" onchange="filterProducts()"><option value="">All phone brands</option><option>iPhone</option><option>Samsung</option><option>Google</option><option>Nokia</option><option>Other brands</option></select></label></div>
+<input type="text" id="catalogueSearch" class="search-bar-input" placeholder="🔍 Search products by name, brand, specifications, or flavours..." onkeyup="filterProducts()">
                 
                 <div class="catalogue-products-grid" id="catalogueGrid">
                     <!-- Products rendered by catalogue.js from catalogue-data.js -->

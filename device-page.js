@@ -14,6 +14,7 @@
         var familyEl = form.querySelector('#deviceFamily');
         var issueEl = form.querySelector('#issue');
         var phoneEl = form.querySelector('#phone');
+        var emailEl = form.querySelector('#email');
 
         if (modelEl && visit && issueEl && phoneEl) {
             event.preventDefault();
@@ -28,13 +29,14 @@
             var formData = new FormData();
             formData.append('access_key', '5bc83c79-247a-42c2-901d-72ec0b4e0573');
             formData.append('phone', phoneEl.value);
+            if (emailEl) formData.append('email', emailEl.value);
             formData.append('subject', family + ' repair: ' + modelEl.value + ' (' + visit + ')');
             formData.append('details',
                 'Device: ' + family +
                 '\nModel: ' + modelEl.value +
                 '\nVisit: ' + visit +
                 '\nIssue: ' + issueEl.value +
-                '\nPhone: ' + phoneEl.value
+                '\nPhone: ' + phoneEl.value + '\nEmail: ' + (emailEl ? emailEl.value : '')
             );
             fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData })
                 .then(function (res) { return res.json(); })
@@ -42,7 +44,7 @@
                     if (!feedback) return;
                     if (data.success) {
                         feedback.style.color = '#f87171';
-                        feedback.setAttribute('role','status'); feedback.setAttribute('aria-live','polite'); feedback.textContent = 'Thank you for submitting your request. We will contact you on that number.';
+                        feedback.setAttribute('role','status'); feedback.setAttribute('aria-live','polite'); feedback.textContent = 'Thank you for submitting your request. We will contact you using the details provided.';
                         form.reset();
                     } else {
                         feedback.style.color = '#ef4444';

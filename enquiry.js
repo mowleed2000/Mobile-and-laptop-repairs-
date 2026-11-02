@@ -16,6 +16,9 @@
 
         var nameEl = document.getElementById('name');
         var phoneEl = document.getElementById('phone');
+        var emailEl = form.querySelector('#email, [name="email"]');
+        var modelEl = form.querySelector('#model');
+        var storageEl = form.querySelector('#storage');
         var deviceEl = document.getElementById('device');
         var issueEl = document.getElementById('issue');
         var conditionEl = document.getElementById('condition');
@@ -26,10 +29,12 @@
         formData.append('access_key', '5bc83c79-247a-42c2-901d-72ec0b4e0573');
         formData.append('name', nameEl ? nameEl.value : '');
         formData.append('phone', phoneEl ? phoneEl.value : '');
+        if (emailEl) formData.append('email', emailEl.value);
+        if (emailEl) formData.append('details', 'Email: ' + emailEl.value);
 
         if (deviceEl && conditionEl) {
-            formData.append('subject', 'Trade-In Valuation: ' + deviceEl.value);
-            formData.append('details', 'Device: ' + deviceEl.value + '\nCondition: ' + conditionEl.value);
+            formData.append('subject', 'Trade-In Valuation: ' + deviceEl.value + ' ' + (modelEl ? modelEl.value : ''));
+            formData.append('details', 'Device type: ' + deviceEl.value + '\nModel: ' + (modelEl ? modelEl.value : '') + '\nStorage: ' + (storageEl ? storageEl.value : '') + '\nCondition: ' + conditionEl.value + '\nEmail: ' + (emailEl ? emailEl.value : ''));
         } else if (deviceEl && issueEl) {
             formData.append('subject', (serviceLabel ? serviceLabel + ': ' : 'New Repair Enquiry: ') + deviceEl.value);
             formData.append('details', (serviceLabel ? 'Service: ' + serviceLabel + '\n' : '') + 'Device: ' + deviceEl.value + '\nIssue: ' + issueEl.value);

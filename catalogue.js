@@ -40,8 +40,8 @@
         }
         var infoLabel = '';
         if (product.flavors && product.flavors.length) {
-            infoLabel = 'View flavour examples';
-            parts.push('<span class="flavour-label">' + escapeHtml(product.flavorNote || 'Flavour examples available in store') + '</span>');
+            infoLabel = 'View available flavours';
+            parts.push('<span class="flavour-label">' + escapeHtml(product.flavorNote || 'Call to confirm available flavours') + '</span>');
         } else if (product.models && product.models.length) {
             var modelSummary = product.category === 'Smartphones'
                 ? product.models.length + ' in-store options'
@@ -65,6 +65,8 @@
     function getFilteredProducts(query) {
         if (typeof productsData === 'undefined') return [];
         var q = (query || '').toLowerCase().trim();
+        var val=function(id){var e=document.getElementById(id);return e?e.value:'';};
+        var bf=val('catalogueBrandFilter'), sf=val('catalogueStrengthFilter'), zf=val('catalogueSizeFilter'), af=val('catalogueAccessoryFilter'), pf=val('cataloguePhoneFilter');
         return productsData.filter(function (product) {
             if (q) {
                 var nameMatch = (product.name || '').toLowerCase().indexOf(q) !== -1;
@@ -82,7 +84,14 @@
                 var match = nameMatch || brandMatch || descMatch || flavorMatch || variantMatch || modelMatch;
                 if (!match) return false;
             }
-            return currentCategory === 'All Products' || product.category === currentCategory || (currentCategory === 'Vapes' && /^(Prefilled Pod Kits|Starter Vape Kits & Refillable Devices)$/.test(product.category));
+            var catOk=currentCategory==='All Products'||product.category===currentCategory||(currentCategory==='Vapes'&&/^(Prefilled Pod Kits|Starter Vape Kits & Refillable Devices)$/.test(product.category));
+            if(!catOk)return false;
+            if(bf&&(product.brand||'')!==bf&&(product.name||'').indexOf(bf)<0)return false;
+            if(sf&&(product.strength||'')!==sf)return false;
+            if(zf&&(product.bottleSize||'')!==zf)return false;
+            if(af&&(product.subcategory||'')!==af)return false;
+            if(pf&&(product.phoneBrand||'')!==pf)return false;
+            return true;
         });
     }
 
@@ -175,7 +184,7 @@
             var empty = document.createElement('p');
             empty.className = 'catalogue-empty';
             empty.style.cssText = 'grid-column:1/-1;text-align:center;color:#94a3b8;margin:32px 0;font-size:1.05rem;';
-            empty.textContent = 'No products match this filter or search.';
+            empty.textContent = ['Tablets','Laptops','Replacement Pods'].indexOf(currentCategory)!==-1 ? 'No '+(currentCategory==='Replacement Pods'?'replacement pod':currentCategory.toLowerCase())+' products are listed right now. Call the shop to confirm availability.' : 'No products match this filter or search.';
             grid.appendChild(empty);
         }
 
@@ -231,7 +240,7 @@
                 ? (product.category === 'Smartphones'
                     ? 'Available In-Store Options (' + product.models.length + '):'
                     : 'Compatible In-Store Phone Models (' + product.models.length + ' Models):')
-                : (isPhoneDetails ? 'Phone details:' : (product.flavors && product.flavors.length ? 'Flavour examples:' : 'Product details:'));
+                : (isPhoneDetails ? 'Phone details:' : (product.flavors && product.flavors.length ? 'Available flavours:' : 'Product details:'));
         }
 
         chipsWrap.innerHTML = '';
@@ -289,6 +298,9 @@
 
         function boot() {
             updateCategoryCounts();
+            function fill(id,vals){var e=document.getElementById(id);if(!e)return;var first=e.options[0];e.innerHTML='';e.appendChild(first);Array.from(new Set(vals.filter(Boolean))).sort().forEach(function(v){var o=document.createElement('option');o.value=v;o.textContent=v;e.appendChild(o);});}
+            fill('catalogueBrandFilter',productsData.filter(function(p){return p.category==='Nicotine Pouches';}).map(function(p){return p.brand;}));
+            fill('catalogueStrengthFilter',productsData.filter(function(p){return p.category==='Nicotine Pouches';}).map(function(p){return p.strength;}));
             var params = new URLSearchParams(window.location.search);
             var category = params.get('category');
             if (category) {
